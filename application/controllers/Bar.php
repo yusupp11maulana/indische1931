@@ -5,6 +5,6 @@ class Bar extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('bar/index');
+		$this->load->view('bar');
 	}
 }
