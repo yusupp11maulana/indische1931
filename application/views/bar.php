@@ -16,8 +16,7 @@
 	<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.css">
 	<!-- Icon LineAwesome CSS-->
 	<link rel="stylesheet" href="assets/vendors/lineawesome/css/line-awesome.min.css">
-	 <!-- Argon CSS -->
-    <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
+	 <!-- Argon datepicker -->
     <script type="text/javascript" src="assets/js/digitalDate.js"></script>
 
 </head>
@@ -102,7 +101,7 @@
 			<div class="row">
 			<!-- TOP CONTENT -->
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -118,7 +117,7 @@
 				</div>
 
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -134,7 +133,7 @@
 				</div>
 
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -153,42 +152,44 @@
 
 			<!-- Main CONTENT -->
 				<div class="col-lg-12">
-					<div class="card">
-						<h5 class="card-header">DETAIL ORDERS DRINKS</h5>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class="table table-hover">
-									<thead align="center" class="thead-dark" id="thead-row">
-										<tr>
-											<th scope="col" class="sort" data-sort="name">ID Pesanan</th>
-											<th scope="col" class="sort" data-sort="name">Nama List</th>
-											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
-											<th scope="col" class="sort" data-sort="status">Meja</th>
-											<th scope="col" class="sort" data-sort="status">Jumlah Minuman</th>
-											<th scope="col" class="sort" data-sort="status">Opsi</th>
+					<div class="card bg-light" style="border-radius: 7px">
+						<div class="container" style="padding-top: 2%; margin-bottom: 1%">
+							<h5>DETAIL ORDERS DRINKS</h5>
+						</div>
+						<div class="table-responsive">
+							<table class="table align-items-center table-light bg-light">
+								<thead align="center" class="thead-dark" id="thead-row">
+									<tr>
+										<th scope="col" class="sort" >ID Pesanan</th>
+										<th scope="col" class="sort" >Nama List</th>
+										<th scope="col" class="sort" >Tanggal Order</th>
+										<th scope="col" class="sort" >Meja</th>
+										<th scope="col" class="sort" >Jumlah Minuman</th>
+										<th scope="col" class="sort" >Keterangan</th>
+										<th scope="col">Opsi</th>
+									</tr>
+								</thead>
+								<tbody class="list">
+										<tr align="center">
+											<td>Ord001</td>
+											<td>Bima</td>
+											<td>15/12/2020</td>
+											<td>3</td>
+											<td>2</td>
+											<td><span class="badge badge-danger">Belum Ready</span></td>
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+													<span class="btn-inner--text">Edit</span>
+												</button>
+												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
+													<span class="btn-inner--text">View</span>
+												</button>
+											</td>
 										</tr>
-									</thead>
-									<tbody class="list">
-											<tr align="center">
-												<td>Ord001</td>
-												<td>Bima</td>
-												<td>15/12/2020</td>
-												<td>3</td>
-												<td>2</td>
-												<td><button class="btn btn-icon btn-success" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-														<span class="btn-inner--text">Edit</span>
-													</button>
-													<button class="btn btn-icon btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="las la-terminal"></i></span>
-														<span class="btn-inner--text">View</span>
-													</button>
-												</td>
-											</tr>
-									</tbody>
-									
-								</table>
-							</div>
+								</tbody>
+								
+							</table>
 						</div>
 					</div>
 				</div>
