@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Dashboard - Bar</title>
+	<title>Dashboard - DWAdmin</title>
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
@@ -154,43 +154,8 @@
 			<!-- Main CONTENT -->
 				<div class="col-lg-12">
 					<div class="card">
-						<h5 class="card-header">DETAIL ORDERS DRINKS</h5>
+						<h5 class="card-header">DETAIL ORDERS</h5>
 						<div class="card-body">
-							<div class="table-responsive">
-								<table class="table table-hover">
-									<thead align="center" class="thead-dark" id="thead-row">
-										<tr>
-											<th scope="col" class="sort" data-sort="name">ID Pegawai</th>
-											<th scope="col" class="sort" data-sort="name">Nama</th>
-											<th scope="col" class="sort" data-sort="budget">Jenis Kelamin</th>
-											<th scope="col" class="sort" data-sort="status">No. Telpon</th>
-											<th scope="col">Alamat</th>
-											<th scope="col" class="sort" data-sort="completion">Tanggal Masuk</th>
-											<th scope="col" colspan="2">Keterangan</th>
-										</tr>
-									</thead>
-									<tbody class="list">
-											<tr align="center">
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td><button class="btn btn-icon btn-success" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-														<span class="btn-inner--text">Edit</span>
-													</button>
-													<button class="btn btn-icon btn-danger" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-														<span class="btn-inner--text">Delete</span>
-													</button>
-												</td>
-											</tr>
-									</tbody>
-									
-								</table>
-							</div>
 						</div>
 					</div>
 				</div>
