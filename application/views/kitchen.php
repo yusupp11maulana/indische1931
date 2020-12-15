@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Dashboard - DWAdmin</title>
+	<title>Dashboard - Kitchen</title>
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
@@ -154,8 +154,40 @@
 			<!-- Main CONTENT -->
 				<div class="col-lg-12">
 					<div class="card">
-						<h5 class="card-header">DETAIL ORDERS</h5>
+						<h5 class="card-header">DETAIL ORDERS KITCHEN</h5>
 						<div class="card-body">
+						<div class="table-responsive">
+								<table class="table table-hover">
+									<thead align="center" class="thead-dark" id="thead-row">
+										<tr>
+											<th scope="col" class="sort" data-sort="name">ID Pesanan</th>
+											<th scope="col" class="sort" data-sort="name">Nama List</th>
+											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
+											<th scope="col" class="sort" data-sort="status">Meja</th>
+											<th scope="col" class="sort" data-sort="status">Jumlah Makanan</th>
+										</tr>
+									</thead>
+									<tbody class="list">
+											<tr align="center">
+												<td>Ord001</td>
+												<td>Bima</td>
+												<td>15/12/2020</td>
+												<td>3</td>
+												<td>5</td>
+												<td><button class="btn btn-icon btn-success" data-toggle="modal" data-target="#updateModal" type="button">
+														<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+														<span class="btn-inner--text">Edit</span>
+													</button>
+													<button class="btn btn-icon btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+														<span class="btn-inner--icon"><i class="las la-terminal"></i></span>
+														<span class="btn-inner--text">View</span>
+													</button>
+												</td>
+											</tr>
+									</tbody>
+									
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

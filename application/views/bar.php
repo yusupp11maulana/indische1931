@@ -160,30 +160,27 @@
 								<table class="table table-hover">
 									<thead align="center" class="thead-dark" id="thead-row">
 										<tr>
-											<th scope="col" class="sort" data-sort="name">ID Pegawai</th>
-											<th scope="col" class="sort" data-sort="name">Nama</th>
-											<th scope="col" class="sort" data-sort="budget">Jenis Kelamin</th>
-											<th scope="col" class="sort" data-sort="status">No. Telpon</th>
-											<th scope="col">Alamat</th>
-											<th scope="col" class="sort" data-sort="completion">Tanggal Masuk</th>
-											<th scope="col" colspan="2">Keterangan</th>
+											<th scope="col" class="sort" data-sort="name">ID Pesanan</th>
+											<th scope="col" class="sort" data-sort="name">Nama List</th>
+											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
+											<th scope="col" class="sort" data-sort="status">Meja</th>
+											<th scope="col" class="sort" data-sort="status">Jumlah Minuman</th>
 										</tr>
 									</thead>
 									<tbody class="list">
 											<tr align="center">
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
+												<td>Ord001</td>
+												<td>Bima</td>
+												<td>15/12/2020</td>
+												<td>3</td>
+												<td>2</td>
 												<td><button class="btn btn-icon btn-success" data-toggle="modal" data-target="#updateModal" type="button">
 														<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 														<span class="btn-inner--text">Edit</span>
 													</button>
-													<button class="btn btn-icon btn-danger" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-														<span class="btn-inner--text">Delete</span>
+													<button class="btn btn-icon btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+														<span class="btn-inner--icon"><i class="las la-terminal"></i></span>
+														<span class="btn-inner--text">View</span>
 													</button>
 												</td>
 											</tr>
