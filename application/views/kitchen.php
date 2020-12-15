@@ -165,6 +165,7 @@
 											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
 											<th scope="col" class="sort" data-sort="status">Meja</th>
 											<th scope="col" class="sort" data-sort="status">Jumlah Makanan</th>
+											<th scope="col" class="sort" data-sort="status">Opsi</th>
 										</tr>
 									</thead>
 									<tbody class="list">

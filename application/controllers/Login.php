@@ -22,4 +22,11 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+
+	public function regist()
+	{
+		$this->load->view('registrasi');
+	}
+
+
 }
