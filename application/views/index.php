@@ -18,17 +18,15 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="col">
-      <div class="container">
-        <img src="<?= base_url()?>assets/cafe/cafe.png" alt="" style="height: 40%; margin-top: 10%">
-      </div>
+  <div class="row" style="margin-top: 8%;">
+    <div class="col-lg-6">
+      <img src="<?= base_url()?>assets/cafe/cafe.png" alt="" style="width: 60%; margin-left: 30%">
     </div>
-    <div class="col">
+    <div class="col-lg-5">
       <div class="container">
         <!-- ROW LOGIN -->
         <div class="row">
-          <div class="col mt-4" style="margin-left: 200px; ">
+          <div class="col mt-4">
             <div class="d-flex justify-content-center">
               <ul class="nav" role="tablist">
                 <li class="nav-item">
@@ -72,6 +70,10 @@
                       <input type="submit" class="btn2" value="Login">
                     </form>
                   </div>
+                </div>
+                <div class="container">
+                  <p class="ml-5 mt-4">Don't have an account?</p>
+                  <a href="<?= base_url()?>login/regist"><button type="button" class="btn btn-outline-dark">CREATE</button></a>
                 </div>
               </div>
               <!-- /MHS -->
