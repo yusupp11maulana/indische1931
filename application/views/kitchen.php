@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Dashboard - Kitchen</title>
-
-	<!-- Bootstrap CSS-->
+<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
 	<!-- Style CSS (White)-->
 	<link rel="stylesheet" href="assets/css/White.css">
@@ -16,8 +15,7 @@
 	<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.css">
 	<!-- Icon LineAwesome CSS-->
 	<link rel="stylesheet" href="assets/vendors/lineawesome/css/line-awesome.min.css">
-	 <!-- Argon CSS -->
-    <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
+	 <!-- Argon datepicker -->
     <script type="text/javascript" src="assets/js/digitalDate.js"></script>
 
 </head>
