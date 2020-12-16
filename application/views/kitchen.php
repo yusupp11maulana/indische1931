@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Dashboard - Kitchen</title>
-<!-- Bootstrap CSS-->
+
+	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
 	<!-- Style CSS (White)-->
 	<link rel="stylesheet" href="assets/css/White.css">
@@ -100,7 +101,7 @@
 			<div class="row">
 			<!-- TOP CONTENT -->
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -116,7 +117,7 @@
 				</div>
 
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -132,7 +133,7 @@
 				</div>
 
 				<div class="col-md-6 col-lg-4">
-					<div class="card">
+					<div class="card" style="border-radius: 10px">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-4 d-flex align-items-center">
@@ -151,46 +152,47 @@
 
 			<!-- Main CONTENT -->
 				<div class="col-lg-12">
-					<div class="card">
-						<h5 class="card-header">DETAIL ORDERS KITCHEN</h5>
-						<div class="card-body">
+					<div class="card bg-light" style="border-radius: 7px">
+						<div class="container" style="padding-top: 2%; margin-bottom: 1%">
+							<h5>DETAIL ORDERS DRINKS</h5>
+						</div>
 						<div class="table-responsive">
-								<table class="table table-hover">
-									<thead align="center" class="thead-dark" id="thead-row">
-										<tr>
-											<th scope="col" class="sort" data-sort="name">ID Pesanan</th>
-											<th scope="col" class="sort" data-sort="name">Nama Customer</th>
-											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
-											<th scope="col" class="sort" data-sort="status">Meja</th>
-											<th scope="col" class="sort" data-sort="status">Jumlah Makanan</th>
-											<th scope="col" class="sort" data-sort="status">Opsi</th>
-											<th scope="col" class="sort" >Keterangan</th>
-										</tr>
-									</thead>
-									<tbody class="list">
-											<tr align="center">
-												<td>Ord001</td>
-												<td>Bima</td>
-												<td>15/12/2020</td>
-												<td>20</td>
-												<td>5</td>
-												<td><span class="badge badge-danger">Belum Ready</span></td>
-												<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+							<table class="table align-items-center table-light bg-light">
+								<thead align="center" class="thead-dark" id="thead-row">
+									<tr>
+										<th scope="col" class="sort" >ID Pesanan</th>
+										<th scope="col" class="sort" >Nama Customer</th>
+										<th scope="col" class="sort" >Tanggal Order</th>
+										<th scope="col" class="sort" >Meja</th>
+										<th scope="col" class="sort" >Jumlah Makanan</th>
+										<th scope="col" class="sort" >Keterangan</th>
+										<th scope="col">Opsi</th>
+									</tr>
+								</thead>
+								<tbody class="list">
+										<tr align="center">
+											<td>Ord001</td>
+											<td>Bima</td>
+											<td>15/12/2020</td>
+											<td>20</td>
+											<td>3</td>
+											<td><span class="badge badge-danger">Belum Ready</span></td>
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Edit</span>
 												</button>
 												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
 													<span class="btn-inner--text">View</span>
-													</button>
-												</td>
-											</tr>
-											<tr align="center">
+												</button>
+											</td>
+										</tr>
+										<tr align="center">
 											<td>Ord002</td>
 											<td>Ucup</td>
 											<td>15/12/2020</td>
 											<td>21</td>
-											<td>2</td>
+											<td>3</td>
 											<td><span class="badge badge-success">Ready</span></td>
 											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
@@ -202,10 +204,9 @@
 												</button>
 											</td>
 										</tr>
-									</tbody>
-									
-								</table>
-							</div>
+								</tbody>
+								
+							</table>
 						</div>
 					</div>
 				</div>
