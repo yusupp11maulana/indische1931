@@ -178,15 +178,6 @@
 											<td>3</td>
                                             <td>2</td>
 											<td><span class="badge badge-danger">Belum Bayar</span></td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Edit</span>
-												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">View</span>
-												</button>
-											</td>
 										</tr>
 										<tr align="center">
 											<td>Ord002</td>
@@ -196,15 +187,6 @@
 											<td>3</td>
                                             <td>2</td>
 											<td><span class="badge badge-success">Terbayar</span></td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Edit</span>
-												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">View</span>
-												</button>
-											</td>
 										</tr>
 								</tbody>
 								
