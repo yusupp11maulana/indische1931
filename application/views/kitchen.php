@@ -161,11 +161,12 @@
 									<thead align="center" class="thead-dark" id="thead-row">
 										<tr>
 											<th scope="col" class="sort" data-sort="name">ID Pesanan</th>
-											<th scope="col" class="sort" data-sort="name">Nama List</th>
+											<th scope="col" class="sort" data-sort="name">Nama Customer</th>
 											<th scope="col" class="sort" data-sort="budget">Tanggal Order</th>
 											<th scope="col" class="sort" data-sort="status">Meja</th>
 											<th scope="col" class="sort" data-sort="status">Jumlah Makanan</th>
 											<th scope="col" class="sort" data-sort="status">Opsi</th>
+											<th scope="col" class="sort" >Keterangan</th>
 										</tr>
 									</thead>
 									<tbody class="list">
@@ -173,18 +174,36 @@
 												<td>Ord001</td>
 												<td>Bima</td>
 												<td>15/12/2020</td>
-												<td>3</td>
+												<td>20</td>
 												<td>5</td>
-												<td><button class="btn btn-icon btn-success" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-														<span class="btn-inner--text">Edit</span>
-													</button>
-													<button class="btn btn-icon btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-														<span class="btn-inner--icon"><i class="las la-terminal"></i></span>
-														<span class="btn-inner--text">View</span>
+												<td><span class="badge badge-danger">Belum Ready</span></td>
+												<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+													<span class="btn-inner--text">Edit</span>
+												</button>
+												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
+													<span class="btn-inner--text">View</span>
 													</button>
 												</td>
 											</tr>
+											<tr align="center">
+											<td>Ord002</td>
+											<td>Ucup</td>
+											<td>15/12/2020</td>
+											<td>21</td>
+											<td>2</td>
+											<td><span class="badge badge-success">Ready</span></td>
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+													<span class="btn-inner--text">Edit</span>
+												</button>
+												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
+													<span class="btn-inner--text">View</span>
+												</button>
+											</td>
+										</tr>
 									</tbody>
 									
 								</table>

@@ -161,7 +161,7 @@
 								<thead align="center" class="thead-dark" id="thead-row">
 									<tr>
 										<th scope="col" class="sort" >ID Pesanan</th>
-										<th scope="col" class="sort" >Nama List</th>
+										<th scope="col" class="sort" >Nama Customer</th>
 										<th scope="col" class="sort" >Tanggal Order</th>
 										<th scope="col" class="sort" >Meja</th>
 										<th scope="col" class="sort" >Jumlah Minuman</th>
@@ -174,7 +174,7 @@
 											<td>Ord001</td>
 											<td>Bima</td>
 											<td>15/12/2020</td>
-											<td>3</td>
+											<td>20</td>
 											<td>2</td>
 											<td><span class="badge badge-danger">Belum Ready</span></td>
 											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
@@ -191,7 +191,7 @@
 											<td>Ord002</td>
 											<td>Ucup</td>
 											<td>15/12/2020</td>
-											<td>3</td>
+											<td>21</td>
 											<td>2</td>
 											<td><span class="badge badge-success">Ready</span></td>
 											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
