@@ -17,7 +17,11 @@
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/vendors/fontawesome/css/all.css">
 	<!-- Icon LineAwesome CSS-->
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/vendors/lineawesome/css/line-awesome.min.css">
-	
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -85,7 +89,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-calendar-day fa-1x"></i></div>
                                 </div>
-                                <input type="text" class="form-control border border-dark" id="" name="" placeholder="Tanggal Lahir">
+                                <input type="date" class="form-control border border-dark text-dark" id="" name="" placeholder="Tanggal Lahir" title="Tanggal Lahir">
                             </div>
                         </div>
                     </div>
@@ -102,20 +106,24 @@
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text border-dark"><i class="fas fa-venus-mars fa-1x"></i></div>
+                                    <div class="input-group-text border-dark" for="inputGroupSelect01"><i class="fas fa-venus-mars fa-1x"></i></div>
                                 </div>
-                                <select class="form-control border border-dark" id="" name="">
-                                    <option disabled selected>Jenis Kelamin</option>
-                                    <option>Laki-laki</option>
-                                    <option>Perempuan</option>
+                                <select class="custom-select border border-dark text-dark" id="inputGroupSelect01" name="">
+                                    <option disabled selected class="text-dark">Jenis Kelamin</option>
+                                    <option class="text-dark">Laki-laki</option>
+                                    <option class="text-dark">Perempuan</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
-                    </form>
+                    <div class="modal-footer">
+                        <a href="<?= base_url()?>login"><button type="button" class="btn btn-outline-dark">SAVE</button></a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </body>
 </html>
+
