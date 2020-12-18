@@ -80,9 +80,15 @@
 					<p class="menu">Apps</p>
 
 					<li>
-						<a href="base_url/bar" class="items">
+						<a href="<?= base_url()?>kasir" class="items">
 							<i class="fa fa-tachometer-alt"></i>
 							<span>Dashoard</span>
+						</a>
+					</li>
+					<li>
+						<a href="<?= base_url()?>kasir/bill" class="items">
+							<i class="fa fa-tachometer-alt"></i>
+							<span>Bill</span>
 						</a>
 					</li>
 				</ul>

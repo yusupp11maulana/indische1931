@@ -7,4 +7,9 @@ class Kasir extends CI_Controller {
 	{
 		$this->load->view('kasir');
 	}
+
+	public function bill()
+	{
+		$this->load->view('bill');
+	}
 }
