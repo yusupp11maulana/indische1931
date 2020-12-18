@@ -32,7 +32,7 @@ The above copyright notice and this permission notice shall be included in all c
 </head>
 
 <body class="index-page sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg bg-primary" color-on-scroll="0" id="sectionsNav">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg " color-on-scroll="0" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="<?= base_url()?>customer">
@@ -46,41 +46,23 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Components
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="./index.html" class="dropdown-item">
-                <i class="material-icons">layers</i> All Components
-              </a>
-              <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Documentation
-              </a>
-            </div>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="material-icons">cloud_download</i> Download
+            <a class="nav-link" href="<?= base_url()?>customer">
+              <i class="material-icons">home</i> Beranda
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
-              <i class="material-icons">unarchive</i> Upgrade to PRO
+            <a class="nav-link" href="">
+              <i class="material-icons">assignment</i> Order Now 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-              <i class="fa fa-twitter"></i>
+            <a class="nav-link" href="">
+              <i class="material-icons">history</i> History 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
-              <i class="fa fa-facebook-square"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/indische1931" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
               <i class="fa fa-instagram"></i>
             </a>
           </li>
@@ -95,7 +77,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="brand">
             <h1>Indische1931 Cafe</h1>
             <h3>Coffee Roastery HahaHihi</h3>
-            <button class="btn btn-rose btn-round mt-3">
+            <button class="btn btn-success btn-round mt-3">
               <i class="material-icons"></i> Order Now
             </button>
           </div>
@@ -104,94 +86,6 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <div class="main main-raised">
-    <!-- PROFIL -->
-    <div class="profile-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 ml-auto mr-auto">
-            <div class="profile">
-              <div class="avatar">
-                <img src="./asset/img/faces/christian.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-              </div>
-              <div class="name">
-                <h3 class="title">Christian Louboutin</h3>
-                <h6>Designer</h6>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="description text-center">
-          <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
-        </div>
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-            <div class="profile-tabs">
-              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
-                    <i class="material-icons">camera</i> Studio
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#works" role="tab" data-toggle="tab">
-                    <i class="material-icons">palette</i> Work
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> Favorite
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="tab-content tab-space">
-          <div class="tab-pane active text-center gallery" id="studio">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/studio-1.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-2.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/studio-5.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-4.jpg" class="rounded">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="works">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="../assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="../assets/img/examples/cynthia-del-rio.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="../assets/img/examples/clem-onojegaw.jpg" class="rounded">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="favorite">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-3.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="../assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-1.jpg" class="rounded">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END PROFIL -->
     <!--         carousel  -->
     <div class="section" id="carousel">
       <div class="container">
@@ -204,32 +98,42 @@ The above copyright notice and this permission notice shall be included in all c
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="./asset/img/bg2.jpg" alt="First slide">
+                    <img class="d-block w-100" src="./asset/img/indische/carousel1.png" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h4>
                         <i class="material-icons">location_on</i>
-                        Yellowstone National Park, United States
+                        Indische1931 Cafe, Jl. Brigjend Katamso No.179 Sidoarjo
                       </h4>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="./asset/img/bg3.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="./asset/img/indische/carousel2.png" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h4>
                         <i class="material-icons">location_on</i>
-                        Somewhere Beyond, United States
+                        Indische1931 Cafe, Jl. Brigjend Katamso No.179 Sidoarjo
                       </h4>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="./asset/img/bg.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="./asset/img/indische/carousel3.png" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h4>
                         <i class="material-icons">location_on</i>
-                        Yellowstone National Park, United States
+                        Indische1931 Cafe, Jl. Brigjend Katamso No.179 Sidoarjo
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./asset/img/indische/carousel4.png" alt="Fourth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h4>
+                        <i class="material-icons">location_on</i>
+                        Indische1931 Cafe, Jl. Brigjend Katamso No.179 Sidoarjo
                       </h4>
                     </div>
                   </div>
@@ -250,12 +154,12 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </div>
     <!--         end carousel -->
-    <div class="section">
+    <div class="section" style="margin-top: -100px">
       <div class="container text-center">
         <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <h2>Completed with examples</h2>
-            <h4>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful kit.</h4>
+            <h2>Indische1931 Cafe</h2>
+            <h4>Cafe Indische 1931 merupakan cafe yang berlokasi di Jl. Brigjend Katamso No.179, Kedungrejo, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256. Cafe ini memiliki tema yang vintage yang cocok bagi anak muda jaman sekarang.</h4>
           </div>
         </div>
       </div>
