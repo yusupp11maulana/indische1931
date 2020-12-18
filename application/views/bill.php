@@ -9,15 +9,15 @@
 	<title>Dashboard - Bar</title>
 
 	<!-- Bootstrap CSS-->
-	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/vendors/bootstrap/css/bootstrap.css">
 	<!-- Style CSS (White)-->
-	<link rel="stylesheet" href="assets/css/White.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/White.css">
 	<!-- FontAwesome CSS-->
-	<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/vendors/fontawesome/css/all.css">
 	<!-- Icon LineAwesome CSS-->
-	<link rel="stylesheet" href="assets/vendors/lineawesome/css/line-awesome.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/vendors/lineawesome/css/line-awesome.min.css">
 	 <!-- Argon datepicker -->
-    <script type="text/javascript" src="assets/js/digitalDate.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/digitalDate.js"></script>
 
 </head>
 <body onload="initClock()">
@@ -49,7 +49,7 @@
 					<div class="dropdown">
 						<div class="dropdown-toggle" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">
-							<img src="assets/images/avatar/avatar-2.png" alt="Profile">
+							<img src="<?= base_url() ?>assets/images/avatar/avatar-2.png" alt="Profile">
 						</div>
 						<div class="dropdown-menu" aria-labelledby="dropdownProfile">
 							
@@ -279,9 +279,9 @@
     </script>
 	<!-- /Argon Scripts -->
 	<!-- Library Javascipt-->
-	<script src="assets/vendors/bootstrap/js/jquery.min.js"></script>
-	<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendors/bootstrap/js/popper.min.js"></script>
-	<script src="assets/js/script.js"></script>
+	<script src="<?= base_url() ?>assets/vendors/bootstrap/js/jquery.min.js"></script>
+	<script src="<?= base_url() ?>assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?= base_url() ?>assets/vendors/bootstrap/js/popper.min.js"></script>
+	<script src="<?= base_url() ?>assets/js/script.js"></script>
  </body>
 </html>
