@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Dashboard - Bar</title>
+	<title>Dashboard - Bill</title>
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/vendors/bootstrap/css/bootstrap.css">
@@ -80,9 +80,15 @@
 					<p class="menu">Apps</p>
 
 					<li>
-						<a href="base_url/bar" class="items">
+						<a href="<?= base_url() ?>kasir" class="items">
 							<i class="fa fa-tachometer-alt"></i>
-							<span>Dashoard</span>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="<?= base_url() ?>kasir/bill" class="items">
+							<i class="fa fa-tachometer-alt"></i>
+							<span>Bill</span>
 						</a>
 					</li>
 				</ul>
@@ -154,7 +160,7 @@
 				<div class="col-lg-12">
 					<div class="card bg-light" style="border-radius: 7px">
 						<div class="container" style="padding-top: 2%; margin-bottom: 1%">
-							<h5>DETAIL ORDERS DRINKS</h5>
+							<h5>BILL CUSTOMER</h5>
 						</div>
 						<div class="table-responsive">
 							<table class="table align-items-center table-light bg-light">
@@ -162,11 +168,11 @@
 									<tr>
 										<th scope="col" class="sort" >ID Pesanan</th>
 										<th scope="col" class="sort" >Nama Customer</th>
-										<th scope="col" class="sort" >Tanggal Order</th>
+										<th scope="col" class="sort" >Tanggal Pesan</th>
 										<th scope="col" class="sort" >Meja</th>
-										<th scope="col" class="sort" >Jumlah Minuman</th>
-										<th scope="col" class="sort" >Keterangan</th>
+										<th scope="col" class="sort" >Total</th>
 										<th scope="col">Opsi</th>
+										<th scope="col" class="sort" >Keterangan</th>
 									</tr>
 								</thead>
 								<tbody class="list">
@@ -175,11 +181,11 @@
 											<td>Bima</td>
 											<td>15/12/2020</td>
 											<td>20</td>
-											<td>2</td>
-											<td><span class="badge badge-danger">Belum Ready</span></td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+											<td>200000</td>
+											<td><span class="badge badge-danger">Belum Terbayar</span></td>
+											<td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Edit</span>
+													<span class="btn-inner--text">Bayar</span>
 												</button>
 												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
@@ -192,11 +198,11 @@
 											<td>Ucup</td>
 											<td>15/12/2020</td>
 											<td>21</td>
-											<td>2</td>
-											<td><span class="badge badge-success">Ready</span></td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+											<td>50000</td>
+											<td><span class="badge badge-success">Terbayar</span></td>
+											<td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Edit</span>
+													<span class="btn-inner--text">Bayar</span>
 												</button>
 												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
