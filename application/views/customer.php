@@ -66,6 +66,9 @@ The above copyright notice and this permission notice shall be included in all c
               <i class="fa fa-instagram"></i>
             </a>
           </li>
+          <li class="nav-item bg-warning" style="border-radius: 60px; ">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Log Out Account" rel="nofollow">LOGOUT</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -78,14 +81,14 @@ The above copyright notice and this permission notice shall be included in all c
             <h1>Indische1931 Cafe</h1>
             <h3>Coffee Roastery HahaHihi</h3>
             <button class="btn btn-success btn-round mt-3">
-              <i class="material-icons"></i> Order Now
+              <i class="material-icons">assignment</i> Order Now
             </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="main main-raised">
+  <div class="main main-raised mb-5">
     <!--         carousel  -->
     <div class="section" id="carousel">
       <div class="container">
@@ -164,192 +167,50 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     </div>
-    <div class="section section-signup page-header" style="background-image: url('./asset/img/city.jpg');">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mx-auto">
-            <div class="card card-login">
-              <form class="form">
-                <div class="card-header card-header-primary text-center">
-                  <h4 class="card-title">Login</h4>
-                  <div class="social-line">
-                    <a href="javascript:;" class="btn btn-just-icon btn-link">
-                      <i class="fa fa-facebook-square"></i>
-                    </a>
-                    <a href="javascript:;" class="btn btn-just-icon btn-link">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="javascript:;" class="btn btn-just-icon btn-link">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </div>
-                </div>
-                <p class="description text-center">Or Be Classical</p>
-                <div class="card-body">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="material-icons">face</i>
-                      </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="First Name">
-                  </div>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="material-icons">mail</i>
-                      </span>
-                    </div>
-                    <input type="email" class="form-control" placeholder="Email">
-                  </div>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="material-icons">lock_outline</i>
-                      </span>
-                    </div>
-                    <input type="password" class="form-control" placeholder="Password" autocomplete="">
-                  </div>
-                </div>
-                <div class="footer text-center">
-                  <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg">Get Started</a>
-                </div>
-              </form>
+    <div class="row ml-5">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header card-header-icon card-header-rose">
+            <div class="card-icon">
+              <div class="col text-center">
+                <h4 class="card-title">Sejarah Cafe</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="container">
+              <img class="d-block w-100" src="./asset/img/indische/history.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 ml-4">
+        <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
+      </div>
+    </div>
+    <div class="row text-right">
+      <div class="col-md-4 ml-4"></div>
+      <div class="col-md-4 mr-2">
+        <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
+      </div>
+      <div class="col-md-3 ml-4">
+        <div class="card">
+          <div class="card-header card-header-icon card-header-rose">
+            <div class="card-icon">
+              <div class="col text-center">
+                <h4 class="card-title">Sejarah Cafe</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="container">
+              <img class="d-block w-100" src="./asset/img/indische/history.png">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-12 text-center">
-      <a href="examples/login-page.html" class="btn btn-link btn-primary btn-lg" target="_blank">View Login Page</a>
-    </div>
-    <div class="section section-examples">
-      <div class="container-fluid text-center">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="examples/landing-page.html" target="_blank">
-              <img src="./asset/img/landing.jpg" alt="Rounded Image" class="img-raised rounded img-fluid">
-              <button class="btn  btn-link btn-primary btn-lg">View Landing Page</button>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="examples/profile-page.html" target="_blank">
-              <img src="./asset/img/profile.jpg" alt="Rounded Image" class="img-raised rounded img-fluid">
-              <button class="btn btn-link btn-primary btn-lg">View Profile Page</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section section-download" id="downloadSection">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-8 mx-auto">
-            <h2>Do you love this UI Kit?</h2>
-            <h4>Cause if you do, it can be yours for FREE. Hit the buttons below to navigate to our website where you can find the kit. Our friends from <a href="https://themeisle.com/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank" rel="nofollow">ThemeIsle</a> created a Wordpress Theme which can be also downloaded for free. Start a new project or give an old Bootstrap project a new look!</h4>
-          </div>
-          <div class="col-sm-8 col-md-6 mx-auto">
-            <a href="https://www.creative-tim.com/product/material-kit" class="btn btn-primary btn-lg">
-              <i class="fa fa-html5"></i> Free HTML Download
-            </a>
-            <a href="https://themeisle.com/themes/hestia/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank" class="btn btn-primary btn-lg" rel="nofollow">
-              <i class="fa fa-wordpress"></i> Wordpress Theme
-            </a>
-          </div>
-        </div>
-        <br><br>
-        <div class="row text-center">
-          <div class="col-md-8 mx-auto">
-            <h2>Want more?</h2>
-            <h4>We've just launched <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" target="_blank">Material Kit PRO</a>. It has a huge number of components, sections and example pages. Start Your Development With A Badass Bootstrap UI Kit inspired by Material Design.</h4>
-          </div>
-          <div class="col-sm-8 col-md-5 mx-auto">
-            <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" class="btn btn-rose btn-upgrade btn-lg" target="_blank">
-              <i class="material-icons">unarchive</i> Upgrade to PRO
-            </a>
-          </div>
-        </div>
-        <div class="sharing-area text-center">
-          <div class="row justify-content-center">
-            <h3>Thank you for supporting us!</h3>
-          </div>
-          <a id="twitter" class="btn btn-raised btn-twitter" href="https://twitter.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-twitter"></i>
-            Tweet
-          </a>
-          <a id="facebook" class="btn btn-raised btn-facebook" href="https://www.facebook.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-facebook-square"></i>
-            Facebook
-          </a>
-          <a id="instagram" class="btn btn-raised btn-instagram" href="https://www.instagram.com/CreativeTimOfficial" rel="nofollow">
-            <i class="fa fa-instagram"></i>
-            Instagram
-          </a>
-          <a id="github" href="https://github.com/creativetimofficial/material-kit" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
-            <i class="fa fa-github"></i>
-            Star
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
-  <!-- Classic Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <i class="material-icons">clear</i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-          </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-link">Nice Button</button>
-          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  End Modal -->
-  <footer class="footer" data-background-color="black">
-    <div class="container">
-      <nav class="float-left">
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com/">
-              Creative Tim
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/presentation">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/blog">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright float-right">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> for a better web.
-      </div>
-    </div>
-  </footer>
   <!--   Core JS Files   -->
   <script src="./asset/js/core/jquery.min.js" type="text/javascript"></script>
   <script src="./asset/js/core/popper.min.js" type="text/javascript"></script>
