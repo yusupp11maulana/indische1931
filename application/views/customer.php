@@ -167,49 +167,80 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     </div>
-    <div class="row ml-5">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-header card-header-icon card-header-rose">
-            <div class="card-icon">
-              <div class="col text-center">
-                <h4 class="card-title">Sejarah Cafe</h4>
+    <!-- CARD SECTION -->
+    <div class="section">
+      <div class="row ml-5">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <div class="col text-center">
+                  <h4 class="card-title">Sejarah Cafe</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="container">
+                <img class="d-block w-100" src="./asset/img/indische/history.png">
               </div>
             </div>
           </div>
-          <div class="card-body">
-            <div class="container">
-              <img class="d-block w-100" src="./asset/img/indische/history.png">
+        </div>
+        <div class="col-md-4 ml-4">
+          <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
+        </div>
+      </div>
+      <div class="row text-right">
+        <div class="col-md-3 ml-4"></div>
+        <div class="col-md-5 mr-2">
+          <p class="h5" style="margin-top: 15%">Indische1931 Cafe memiliki suasana yang mendukung untuk nongkrong bersama teman dan keluarga, selain itu indische1931 Cafe mengusung konsep cafe yang tidak biasa - biasa saja seperti cafe pada umumnya. cafe ini memiliki konsep cafe modern bertema vintage sehingga pengunjung dapat mengabadikan momen saat nongkrong dangan estetik. selain itu tempat di cafe ini memiliki tingkat kebersihan yang bagus sehingga dapat membuat pengunjung merasa nyaman. cafe ini memiliki lokasi yang strategis karena dekat dengan jalan utama di Jalan Raya Waru.</p>
+        </div>
+        <div class="col-md-3 ml-4">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <div class="col text-center">
+                  <h4 class="card-title">Suasana Cafe</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="container">
+                <img class="d-block w-100" src="./asset/img/indische/aestetik.png">
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 ml-4">
-        <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
-      </div>
     </div>
-    <div class="row text-right">
-      <div class="col-md-4 ml-4"></div>
-      <div class="col-md-4 mr-2">
-        <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
-      </div>
-      <div class="col-md-3 ml-4">
-        <div class="card">
-          <div class="card-header card-header-icon card-header-rose">
-            <div class="card-icon">
-              <div class="col text-center">
-                <h4 class="card-title">Sejarah Cafe</h4>
-              </div>
-            </div>
+    <!-- /CARD SECTION -->
+    <!-- Footer -->
+    <div class="section section-download" id="downloadSection" style="margin-top: -150px">
+      <div class="container">
+        <div class="sharing-area text-center">
+          <div class="row justify-content-center">
+            <h3>Thank you for supporting us!</h3>
           </div>
-          <div class="card-body">
-            <div class="container">
-              <img class="d-block w-100" src="./asset/img/indische/history.png">
-            </div>
-          </div>
+          <a id="twitter" class="btn btn-raised btn-twitter" href="https://twitter.com/CreativeTim" rel="nofollow">
+            <i class="fa fa-twitter"></i>
+            Tweet
+          </a>
+          <a id="facebook" class="btn btn-raised btn-facebook" href="https://www.facebook.com/CreativeTim" rel="nofollow">
+            <i class="fa fa-facebook-square"></i>
+            Facebook
+          </a>
+          <a id="instagram" class="btn btn-raised btn-instagram" href="https://www.instagram.com/indische1931" rel="nofollow">
+            <i class="fa fa-instagram"></i>
+            Instagram
+          </a>
+          <a id="github" href="https://indischegroup.com/" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
+            <i class="fa fa-chrome"></i>
+            Indischegroup
+          </a>
         </div>
       </div>
     </div>
+    <!-- Footer -->
   </div>
   <!--   Core JS Files   -->
   <script src="./asset/js/core/jquery.min.js" type="text/javascript"></script>
