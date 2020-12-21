@@ -18,6 +18,10 @@
 	<link rel="stylesheet" href="assets/vendors/lineawesome/css/line-awesome.min.css">
 	 <!-- Argon datepicker -->
     <script type="text/javascript" src="assets/js/digitalDate.js"></script>
+	
+	<!-- ICON WEB -->
+	<link rel="icon" type="image/png" href="./asset/img/indische/logo.png">
+
 
 </head>
 <body onload="initClock()">
@@ -52,12 +56,12 @@
 							<img src="assets/images/avatar/avatar-2.png" alt="Profile">
 						</div>
 						<div class="dropdown-menu" aria-labelledby="dropdownProfile">
-							
-							<a class="dropdown-item" href="profile.html">
-								<i class="las la-user mr-2"></i> My Profile
+<!-- CORRECT BIM -->
+							<a class="dropdown-item" href="<?= base_url()?>admin">
+								<i class="las la-user mr-2"></i> Halo Admin,
 							</a>					 
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="signin.html">
+							<a class="dropdown-item" href="">
 								<i class="las la-sign-out-alt mr-2"></i> Log Out
 							</a>
 						</div>
@@ -87,7 +91,7 @@
 					</li>
 					<li>
 						<a href="<?= base_url()?>admin/karyawan" class="items">
-							<i class="fa fa-tachometer-alt"></i>
+							<i class="fa fa-users"></i>
 							<span>Karyawan</span>
 						</a>
 					</li>

@@ -19,6 +19,9 @@
 	 <!-- Argon datepicker -->
     <script type="text/javascript" src="<?= base_url()?>assets/js/digitalDate.js"></script>
 
+	<!-- ICON WEB -->
+	<link rel="icon" type="image/png" href="<?= base_url()?>asset/img/indische/logo.png">
+
 </head>
 <body onload="initClock()">
   
@@ -87,7 +90,7 @@
 					</li>
                     <li>
 						<a href="<?= base_url()?>admin/karyawan" class="items">
-							<i class="fa fa-tachometer-alt"></i>
+							<i class="fa fa-users"></i>
 							<span>Karyawan</span>
 						</a>
 					</li>
@@ -163,10 +166,12 @@
 								</tbody>
 								
 							</table>
-                            <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">Tambah Pegawai</span>
-												</button>
+						</div>
+						<div class="container mt-3 mb-4 text-right">
+							<button class="btn btn-md btn-success " data-toggle="modal" data-target="#updateModal" type="button">
+								<span class="btn-inner--icon"><i class="fas fa-user-plus"></i></span>
+								<span class="btn-inner--text">Tambah Pegawai</span>
+							</button>
 						</div>
 					</div>
 				</div>

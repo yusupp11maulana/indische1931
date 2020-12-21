@@ -52,12 +52,12 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="<?= base_url()?>order">
               <i class="material-icons">assignment</i> Order Now 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="<?= base_url()?>history">
               <i class="material-icons">history</i> History 
             </a>
           </li>

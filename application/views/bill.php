@@ -19,6 +19,9 @@
 	 <!-- Argon datepicker -->
     <script type="text/javascript" src="<?= base_url() ?>assets/js/digitalDate.js"></script>
 
+	<!-- ICON WEB -->
+	<link rel="icon" type="image/png" href="<?= base_url() ?>asset/img/indische/logo.png">
+
 </head>
 <body onload="initClock()">
   

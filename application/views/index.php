@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="<?= base_url()?>style.css">
   <script type="text/javascript" src="assets/sweetalert/sweetalert.min.js"></script>
 
+  <!-- ICON WEB -->
+	<link rel="icon" type="image/png" href="./asset/img/indische/logo.png">
+
 </head>
 
 <body>
