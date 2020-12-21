@@ -111,13 +111,9 @@ The above copyright notice and this permission notice shall be included in all c
                   <td>3</td>
                   <td>Rp 50.000</td>
                   <td><span class="badge badge-success">Lunas</span></td>
-                  <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
-                      <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-                      <span class="btn-inner--text">Edit</span>
-                    </button>
-                    <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-                      <span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-                      <span class="btn-inner--text">View</span>
+                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+                      <span class="btn-inner--icon material-icons">open_in_new</span>
+                      <span class="btn-inner--text">Detail Order</span>
                     </button>
                   </td>
                 </tr>
@@ -128,13 +124,9 @@ The above copyright notice and this permission notice shall be included in all c
                   <td>3</td>
                   <td>Rp 150.000</td>
                   <td><span class="badge badge-success">Lunas</span></td>
-                  <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
-                      <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-                      <span class="btn-inner--text">Edit</span>
-                    </button>
-                    <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
-                      <span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-                      <span class="btn-inner--text">View</span>
+                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+                      <span class="btn-inner--icon material-icons">open_in_new</span>
+                      <span class="btn-inner--text">Detail Order</span>
                     </button>
                   </td>
                 </tr>
