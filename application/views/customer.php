@@ -221,14 +221,6 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="row justify-content-center">
             <h3>Thank you for supporting us!</h3>
           </div>
-          <a id="twitter" class="btn btn-raised btn-twitter" href="https://twitter.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-twitter"></i>
-            Tweet
-          </a>
-          <a id="facebook" class="btn btn-raised btn-facebook" href="https://www.facebook.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-facebook-square"></i>
-            Facebook
-          </a>
           <a id="instagram" class="btn btn-raised btn-instagram" href="https://www.instagram.com/indische1931" rel="nofollow">
             <i class="fa fa-instagram"></i>
             Instagram

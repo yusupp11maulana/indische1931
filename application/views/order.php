@@ -86,32 +86,33 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <div class="main main-raised mb-5">
-    <!-- Footer -->
-    <div class="section section-download" id="downloadSection" style="margin-top: -150px">
-      <div class="container">
-        <div class="sharing-area text-center">
-          <div class="row justify-content-center">
-            <h3>Thank you for supporting us!</h3>
-          </div>
-          <a id="twitter" class="btn btn-raised btn-twitter" href="https://twitter.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-twitter"></i>
-            Tweet
-          </a>
-          <a id="facebook" class="btn btn-raised btn-facebook" href="https://www.facebook.com/CreativeTim" rel="nofollow">
-            <i class="fa fa-facebook-square"></i>
-            Facebook
-          </a>
-          <a id="instagram" class="btn btn-raised btn-instagram" href="https://www.instagram.com/indische1931" rel="nofollow">
-            <i class="fa fa-instagram"></i>
-            Instagram
-          </a>
-          <a id="github" href="https://indischegroup.com/" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
-            <i class="fa fa-chrome"></i>
-            Indischegroup
-          </a>
+    <!-- Denah -->
+      <div class="section" id="carousel">
+        <div class="container text-center">
+          <h2 class="title">Denah Kafe</h2>
+          <img src="./asset/img/indische/denah.png" alt="" style="width: 50%">
         </div>
       </div>
-    </div>
+    <!-- /Denah-->
+    <!-- FORM -->
+    <!-- Footer -->
+      <div class="section section-download" id="downloadSection" style="margin-top: -150px">
+        <div class="container">
+          <div class="sharing-area text-center">
+            <div class="row justify-content-center">
+              <h3>Thank you for supporting us!</h3>
+            </div>
+            <a id="instagram" class="btn btn-raised btn-instagram" href="https://www.instagram.com/indische1931" rel="nofollow">
+              <i class="fa fa-instagram"></i>
+              Instagram
+            </a>
+            <a id="github" href="https://indischegroup.com/" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
+              <i class="fa fa-chrome"></i>
+              Indischegroup
+            </a>
+          </div>
+        </div>
+      </div>
     <!-- Footer -->
   </div>
   <!--   Core JS Files   -->
