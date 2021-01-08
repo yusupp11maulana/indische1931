@@ -83,7 +83,7 @@
 					<p class="menu">Apps</p>
 
 					<li>
-						<a href="base_url/bar" class="items">
+						<a href="<?= base_url()?>bar" class="items">
 							<i class="fa fa-tachometer-alt"></i>
 							<span>Dashoard</span>
 						</a>
