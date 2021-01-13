@@ -94,7 +94,80 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     <!-- /Denah-->
-    <!-- FORM -->
+    <!-- FORM Menu -->
+    <form action="">
+      <div class="container">
+        <div id="inputs" class="ml-5 pl-5">
+          <div class="row ml-5 pl-5">
+            <div class="col-lg-4 col-sm-4 mt-4 ml-5">
+              <div class="form-group">
+                <select class="form-control pl-3" name="kode_produk">
+                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu -</option>
+                  <option disabled></option>
+                  <option disabled style="font-weight: bold; color: #8C6232">COFFEE</option>
+                  <option >Americano</option>
+                  <option >Cappucino</option>
+                  <option disabled></option>
+                  <option disabled style="font-weight: bold; color: #8C6232">CRUNCHY CREAM</option>
+                  <option >Cookies</option>
+                  <option >Regal</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+              <div class="form-group">
+                <label for="exampleInput1" class="bmd-label-floating">Total Pesanan</label>
+                <input type="number" class="form-control" id="exampleInput1">
+                <span class="bmd-help">Banyaknya orderan yang di pesan berupa angka</span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mt-4">
+              <div class="form-group">
+                <button type="Submit" class="btn btn-info btn-sm">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Form Menu -->
+    <!-- Form Transaksi -->
+    <form action="">
+      <div class="container">
+        <div id="inputs" class="ml-5 pl-5">
+          <div class="row ml-5 pl-5">
+            <div class="col-lg-4 col-sm-4 mt-4 ml-5">
+              <div class="form-group">
+                <select class="form-control pl-3" name="kode_produk">
+                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu -</option>
+                  <option disabled></option>
+                  <option disabled style="font-weight: bold; color: #8C6232">COFFEE</option>
+                  <option >Americano</option>
+                  <option >Cappucino</option>
+                  <option disabled></option>
+                  <option disabled style="font-weight: bold; color: #8C6232">CRUNCHY CREAM</option>
+                  <option >Cookies</option>
+                  <option >Regal</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+              <div class="form-group">
+                <label for="exampleInput1" class="bmd-label-floating">Total Pesanan</label>
+                <input type="number" class="form-control" id="exampleInput1">
+                <span class="bmd-help">Banyaknya orderan yang di pesan berupa angka</span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mt-4">
+              <div class="form-group">
+                <button type="Submit" class="btn btn-info btn-sm">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>S
+    <!-- /Form Transaksi -->
     <!-- Footer -->
       <div class="section section-download" id="downloadSection" style="margin-top: -150px">
         <div class="container">
