@@ -87,13 +87,33 @@ The above copyright notice and this permission notice shall be included in all c
   </div>
   <div class="main main-raised mb-5">
     <!-- Denah -->
-      <div class="section" id="carousel">
+      <div class="section">
         <div class="container text-center">
           <h2 class="title">Denah Kafe</h2>
           <img src="./asset/img/indische/denah.png" alt="" style="width: 50%">
         </div>
       </div>
     <!-- /Denah-->
+
+    <!-- MENU -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="container">
+            <div class="row"><h2 class="title">Menu Minuman</h2></div>
+            <div class="row"><img src="./asset/img/indische/minuman.png" alt="" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="container">
+            <div class="row"><h2 class="title">Menu makanan</h2></div>
+            <div class="row"><img src="./asset/img/indische/makanan.png" alt="" style="width: 80%"></div>
+          </div>        
+        </div>
+      </div>
+    </div>
+    <!-- /Menu -->
+
     <!-- FORM Menu -->
     <form action="">
       <div class="container">
@@ -131,6 +151,7 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </form>
     <!-- Form Menu -->
+
     <!-- Form Transaksi -->
     <form action="">
       <div class="container">
@@ -158,6 +179,7 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </form>
     <!-- /Form Transaksi -->
+
     <!-- Footer -->
       <div class="section section-download" id="downloadSection" style="margin-top: -150px">
         <div class="container">
@@ -177,6 +199,7 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     <!-- Footer -->
+
   </div>
   <!--   Core JS Files   -->
   <script src="./asset/js/core/jquery.min.js" type="text/javascript"></script>
