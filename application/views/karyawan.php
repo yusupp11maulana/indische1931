@@ -136,11 +136,11 @@
                                             <td>Jl. Banyu Urip Lor No.78</td>
 											<td>085773827462</td>
                                             <td>Kasir</td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Edit</span>
 												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+												<button class="btn btn-sm btn-info">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
 													<span class="btn-inner--text">Delete</span>
 												</button>
@@ -153,29 +153,67 @@
                                             <td>Jl.Petemon Barat No.102</td>
 											<td>088173649382</td>
                                             <td>Kitchen</td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateModal" type="button">
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Edit</span>
 												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+												<button class="btn btn-sm btn-info" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
 													<span class="btn-inner--text">Delete</span>
 												</button>
 											</td>
 										</tr>
+										<!-- Classic Modal -->
+										<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Edit Pegawai</h5>
+													</div>
+													<div class="modal-body">
+														<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link">Nice Button</button>
+														<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									<!--  End Modal -->
 								</tbody>
 								
 							</table>
 						</div>
 						<div class="container mt-3 mb-4 text-right">
-							<button class="btn btn-md btn-success " data-toggle="modal" data-target="#updateModal" type="button">
+							<button class="btn btn-md btn-success " data-toggle="modal" data-target="#AddModal" type="button">
 								<span class="btn-inner--icon"><i class="fas fa-user-plus"></i></span>
 								<span class="btn-inner--text">Tambah Pegawai</span>
 							</button>
 						</div>
+
 					</div>
 				</div>
-
+				<!-- Classic Modal -->
+					<div class="modal fade" id="AddModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Tambah Pegawai</h5>
+								</div>
+								<div class="modal-body">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+									</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-link">Nice Button</button>
+									<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!--  End Modal -->
 			<!-- /Main CONTENT -->
 			
 			</div>
