@@ -85,13 +85,55 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </div>
   </div>
-  <div class="main main-raised mb-5">
-    <div class="section">
-      <div class="container">
+
+  <div class="main main-raised mb-5 pb-5">
+    <div class="section cd-section" id="javascriptComponents">
+      <div class="container mb-5">
         <!-- Table -->
-        <h3 class="mb-4">Tabel Riwayat Pemesanan</h3>
+        <h3 class="mb-4">Pesanan Hari ini</h3>
         <div class="table-responsive rounded">
           <table class="table align-items-center table-light bg-light">
+            <thead align="center" class="thead-dark" id="thead-row">
+              <tr>
+                <th scope="col" class="sort" >ID Detail   </th>
+                <th scope="col" class="sort" >Nama Menu</th>
+                <th scope="col" class="sort" >Jumlah</th>
+                <th scope="col" class="sort" >Harga</th>
+                <th scope="col" class="sort" >Total Pembayaran</th>
+                <th scope="col" class="sort" >Keterangan</th>
+              </tr>
+            </thead>
+            <tbody class="list thead-dark">
+                <tr align="center">
+                  <td>Det001</td>
+                  <td>Cappucino</td>
+                  <td>2</td>
+                  <td>Rp 25000</td>
+                  <td>Rp 50000</td>
+                  <td><span class="badge badge-success">Ready</span></td>
+                </tr>
+                <tr align="center">
+                  <td>Det002</td>
+                  <td>Spagheti Bolognese</td>
+                  <td>1</td>
+                  <td>Rp 30000</td>
+                  <td>Rp 30000</td>
+                  <td><span class="badge badge-warning">On Proccess</span></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /Table -->
+      </div>
+    </div>
+  </div>
+  <div class="container bg-warning rounded">
+    <div class="section cd-section" id="javascriptComponents">
+      <div class="container mb-5">
+        <!-- Table -->
+        <h3 class="mb-4 text-light">Riwayat Pemesanan</h3>
+        <div class="table-responsive rounded">
+          <table class="table align-items-center table-light bg-light mb-4">
             <thead align="center" class="thead-dark" id="thead-row">
               <tr>
                 <th scope="col" class="sort" >ID Pesanan</th>
@@ -111,7 +153,7 @@ The above copyright notice and this permission notice shall be included in all c
                   <td>3</td>
                   <td>Rp 50.000</td>
                   <td><span class="badge badge-success">Lunas</span></td>
-                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
                       <span class="btn-inner--icon material-icons">open_in_new</span>
                       <span class="btn-inner--text">Detail Order</span>
                     </button>
@@ -124,20 +166,42 @@ The above copyright notice and this permission notice shall be included in all c
                   <td>3</td>
                   <td>Rp 150.000</td>
                   <td><span class="badge badge-success">Lunas</span></td>
-                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#updateModal" type="button">
+                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
                       <span class="btn-inner--icon material-icons">open_in_new</span>
                       <span class="btn-inner--text">Detail Order</span>
                     </button>
                   </td>
                 </tr>
+                <!-- Classic Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <i class="material-icons">clear</i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-link">Nice Button</button>
+                        <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!--  End Modal -->
             </tbody>
-            
           </table>
         </div>
         <!-- /Table -->
       </div>
     </div>
-    <!-- Footer -->
+  </div>
+  <!-- Footer -->
     <div class="section section-download" id="downloadSection" style="margin-top: -150px">
       <div class="container">
         <div class="sharing-area text-center">
@@ -156,7 +220,6 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </div>
     <!-- Footer -->
-  </div>
   <!--   Core JS Files   -->
   <script src="./asset/js/core/jquery.min.js" type="text/javascript"></script>
   <script src="./asset/js/core/popper.min.js" type="text/javascript"></script>
@@ -177,8 +240,7 @@ The above copyright notice and this permission notice shall be included in all c
       // Sliders Init
       materialKit.initSliders();
     });
-
-
+    
     function scrollToDownload() {
       if ($('.section-download').length != 0) {
         $("html, body").animate({
