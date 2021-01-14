@@ -90,7 +90,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="section">
         <div class="container text-center">
           <h2 class="title">Denah Kafe</h2>
-          <img src="./asset/img/indische/denah.png" alt="" style="width: 50%">
+          <img src="./asset/img/indische/denah.png" alt="" style="width: 40%">
         </div>
       </div>
     <!-- /Denah-->
