@@ -74,7 +74,7 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </nav>
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('./asset/img/indische/bg3.png');">
-    <div class="container">
+    <div class="container" style="margin-top: -100px">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
@@ -86,7 +86,7 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
 
-  <div class="main main-raised mb-5 pb-5">
+  <div class="main main-raised mb-5 pb-5" style="margin-top: -200px">
     <div class="section cd-section" id="javascriptComponents">
       <div class="container mb-5">
         <!-- Table -->
