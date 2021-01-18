@@ -35,7 +35,7 @@ The above copyright notice and this permission notice shall be included in all c
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg " color-on-scroll="0" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="<?= base_url()?>customer">
+        <a class="navbar-brand" href="<?= base_url()?>landing">
           Indische1931 Cafe</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -47,7 +47,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url()?>customer">
+            <a class="nav-link" href="<?= base_url()?>landing">
               <i class="material-icons">home</i> Beranda
             </a>
           </li>
@@ -67,7 +67,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item bg-warning" style="border-radius: 60px; ">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Log Out Account" rel="nofollow">Login</a>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login" data-original-title="Log Out Account" rel="nofollow">Login</a>
           </li>
         </ul>
       </div>
@@ -160,60 +160,16 @@ The above copyright notice and this permission notice shall be included in all c
     <div class="section" style="margin-top: -100px">
       <div class="container text-center">
         <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <h2>Indische1931 Cafe</h2>
-            <h4>Cafe Indische 1931 merupakan cafe yang berlokasi di Jl. Brigjend Katamso No.179, Kedungrejo, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256. Cafe ini memiliki tema yang vintage yang cocok bagi anak muda jaman sekarang.</h4>
+          <div class="container">
+            <h3>Promo Special</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
           </div>
         </div>
       </div>
     </div>
-    <!-- CARD SECTION -->
-    <div class="section">
-      <div class="row ml-5">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-header card-header-icon card-header-rose">
-              <div class="card-icon">
-                <div class="col text-center">
-                  <h4 class="card-title">Sejarah Cafe</h4>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="container">
-                <img class="d-block w-100" src="./asset/img/indische/history.png">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ml-4">
-          <p class="h5" style="margin-top: 15%">Bangunan pada cafe ini terbangun pada tahun 1931 dan digunakan tempat berkumpulnya organisasi islam pada waktu itu. tempat ini terselamatkan dari serangan bom penjajah sebelum tahun 1945. 88 tahun sejak tempat ini di bangun tepatnya tahun 2019, cucu dari pemilik ini merenovasi bangunan ini menjadi sebuah cafe modern tanpa menghilangkan nuansa vintage untuk tempat berkumpulnya para pemuda di masa ini.</p>
-        </div>
-      </div>
-      <div class="row text-right">
-        <div class="col-md-3 ml-4"></div>
-        <div class="col-md-5 mr-2">
-          <p class="h5" style="margin-top: 15%">Indische1931 Cafe memiliki suasana yang mendukung untuk nongkrong bersama teman dan keluarga, selain itu indische1931 Cafe mengusung konsep cafe yang tidak biasa - biasa saja seperti cafe pada umumnya. cafe ini memiliki konsep cafe modern bertema vintage sehingga pengunjung dapat mengabadikan momen saat nongkrong dangan estetik. selain itu tempat di cafe ini memiliki tingkat kebersihan yang bagus sehingga dapat membuat pengunjung merasa nyaman. cafe ini memiliki lokasi yang strategis karena dekat dengan jalan utama di Jalan Raya Waru.</p>
-        </div>
-        <div class="col-md-3 ml-4">
-          <div class="card">
-            <div class="card-header card-header-icon card-header-rose">
-              <div class="card-icon">
-                <div class="col text-center">
-                  <h4 class="card-title">Suasana Cafe</h4>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="container">
-                <img class="d-block w-100" src="./asset/img/indische/aestetik.png">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /CARD SECTION -->
     <!-- Footer -->
     <div class="section section-download" id="downloadSection" style="margin-top: -150px">
       <div class="container">

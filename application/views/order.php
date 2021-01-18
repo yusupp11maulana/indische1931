@@ -35,7 +35,7 @@ The above copyright notice and this permission notice shall be included in all c
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg " color-on-scroll="0" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="<?= base_url()?>customer">
+        <a class="navbar-brand" href="<?= base_url()?>landing">
           Indische1931 Cafe</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -47,7 +47,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url()?>customer">
+            <a class="nav-link" href="<?= base_url()?>landing">
               <i class="material-icons">home</i> Beranda
             </a>
           </li>
