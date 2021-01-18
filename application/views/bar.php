@@ -54,11 +54,7 @@
 							aria-expanded="false">
 							<img src="assets/images/avatar/avatar-2.png" alt="Profile">
 						</div>
-						<div class="dropdown-menu" aria-labelledby="dropdownProfile">
-							
-							<a class="dropdown-item" href="profile.html">
-								<i class="las la-user mr-2"></i> My Profile
-							</a>					 
+						<div class="dropdown-menu" aria-labelledby="dropdownProfile">					 
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="signin.html">
 								<i class="las la-sign-out-alt mr-2"></i> Log Out

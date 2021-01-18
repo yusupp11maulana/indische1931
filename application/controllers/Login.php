@@ -6,6 +6,16 @@ class Login extends CI_Controller {
         $this->load->view('login');
     }
 
+  public function login_official(){
+    $this->form_validation->set_rules('nama', 'Username', 'trim|required');
+    $this->form_validation->set_rules('pin', 'Pin', 'trim|required');
+    if($this->form_validation->run() == false){
+        $this->load->view('login');
+    } else{
+      $this->Model_login->LoginAdmin();
+    }
+  }
+
     public function regist(){
 		$this->load->view('registrasi');
 	}
