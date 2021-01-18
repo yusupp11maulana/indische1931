@@ -85,7 +85,7 @@
               <div class="tab-pane fade" id="step-2" area-labelledby="step2-tab" role="tab-panel">
                 <div class="innerContent">
                   <div class="login-content justify-content-center">
-                    <form action="" method="POST">
+                    <form action="<?= base_url()?>login/login_official" method="POST">
                       <div class="input-div one">
                         <div class="i">
                           <i class="fas fa-user"></i>

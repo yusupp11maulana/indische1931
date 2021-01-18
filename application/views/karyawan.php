@@ -59,7 +59,7 @@
 							<a class="dropdown-item" href="<?= base_url()?>admin">
 								<i class="las la-user mr-2"></i> Halo Admin,
 							</a>
-							<a class="dropdown-item" href="signin.html">
+							<a class="dropdown-item" href="<?= base_url()?>login/logout">
 								<i class="las la-sign-out-alt mr-2"></i> Log Out
 							</a>
 						</div>

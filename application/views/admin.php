@@ -61,7 +61,7 @@
 								<i class="las la-user mr-2"></i> Halo Admin,
 							</a>					 
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="">
+							<a class="dropdown-item" href="<?= base_url()?>login/logout">
 								<i class="las la-sign-out-alt mr-2"></i> Log Out
 							</a>
 						</div>

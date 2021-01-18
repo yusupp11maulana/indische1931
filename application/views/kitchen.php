@@ -56,7 +56,7 @@
 						</div>
 						<div class="dropdown-menu" aria-labelledby="dropdownProfile">					 
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="signin.html">
+							<a class="dropdown-item" href="<?= base_url()?>login/logout">
 								<i class="las la-sign-out-alt mr-2"></i> Log Out
 							</a>
 						</div>
@@ -153,7 +153,7 @@
 				<div class="col-lg-12">
 					<div class="card bg-light" style="border-radius: 7px">
 						<div class="container" style="padding-top: 2%; margin-bottom: 1%">
-							<h5>DETAIL ORDERS DRINKS</h5>
+							<h5>DETAIL ORDERS FOOD</h5>
 						</div>
 						<div class="table-responsive">
 							<table class="table align-items-center table-light bg-light">
