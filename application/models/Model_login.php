@@ -4,6 +4,8 @@ class Model_login extends CI_model
 {
     public function logout(){
         $this->session->unset_userdata('id_pegawai');
+        $this->session->unset_userdata('ktp');
+        $this->session->unset_userdata('email');
         redirect(base_url());
     }
 
@@ -39,5 +41,43 @@ class Model_login extends CI_model
         else{
             redirect('login');
         }
+    }
+
+    public function LoginCust(){
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $user = $this->db->get_where('customer', ['email'=> $email])->row_array();
+        if($user){
+            //ada
+            if($password == $user['password']){
+                $data=[
+                    'ktp' => $user['no_ktp'],
+                    'email' => $user['email'],
+                ];
+                $this->session->set_userdata($data);
+                redirect('landing');
+            }
+            else{
+                redirect('login');
+            }
+        }
+        else{
+            redirect('login');
+        }
+    }
+
+    public function RegistrasiCust(){
+        $data = array(
+            "email" => $this->input->post('email', true),
+            "password" => $this->input->post('pass', true),
+            "nama_customer" => $this->input->post('namacust', true),
+            "alamat_customer" => $this->input->post('alamatcust', true),
+            "no_ktp" => $this->input->post('ktp', true),
+            "tanggal_lahir" => $this->input->post('ttlcust', true),
+            "no_telp_customer" => $this->input->post('telpcust', true),
+            "jenis_kelamin" => $this->input->post('jkcust', true),
+        );
+        $this->db->insert('customer', $data);
+        redirect('login');
     }
 }

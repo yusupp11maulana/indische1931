@@ -67,7 +67,11 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item bg-warning" style="border-radius: 60px; ">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login" data-original-title="Log Out Account" rel="nofollow">Login</a>
+            <?php if($ktp == ""){?>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login" data-original-title="Login Account" rel="nofollow">Login</a>
+            <?php } else{?>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login/logout" data-original-title="Log Out Account" rel="nofollow">Logout</a>
+            <?php }?>
           </li>
         </ul>
       </div>
@@ -80,9 +84,11 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="brand">
             <h1>Indische1931 Cafe</h1>
             <h3>Coffee Roastery HahaHihi</h3>
-            <button class="btn btn-success btn-round mt-3">
-              <i class="material-icons">assignment</i> Order Now
-            </button>
+            <a class="nav-link" href="<?= base_url()?>order">
+              <button class="btn btn-success btn-round mt-3">
+                <i class="material-icons">assignment</i> Order Now
+              </button>
+            </a>
           </div>
         </div>
       </div>

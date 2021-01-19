@@ -67,7 +67,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item bg-warning" style="border-radius: 60px; ">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Log Out Account" rel="nofollow">LOGOUT</a>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login/logout" data-original-title="Log Out Account" rel="nofollow">Logout</a>
           </li>
         </ul>
       </div>
@@ -123,14 +123,18 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="form-group">
                 <select class="form-control pl-3" name="kode_produk">
                   <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu -</option>
-                  <option disabled></option>
+                  <?php foreach ($menu as $pilih) :
+                    echo $pilih['body_menu'];
+                  endforeach;
+                  ?>
+                  <!-- <option disabled></option>
                   <option disabled style="font-weight: bold; color: #8C6232">COFFEE</option>
                   <option >Americano</option>
                   <option >Cappucino</option>
                   <option disabled></option>
                   <option disabled style="font-weight: bold; color: #8C6232">CRUNCHY CREAM</option>
                   <option >Cookies</option>
-                  <option >Regal</option>
+                  <option >Regal</option> -->
                 </select>
               </div>
             </div>

@@ -38,14 +38,14 @@
                 </div>
             </div>
             <div class="card-body">
-                <form>
+                <form action="<?= base_url()?>login/newcust" method="POST">
                     <div class="form-row align-items-center mb-4">
                         <div class="col-md-6">
                             <div class="input-group ">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark" ><i class="fas fa-envelope fa-1x "></i></div>
                                 </div>
-                                <input type="email" class="form-control border border-dark" id="" name="" placeholder="Email">
+                                <input type="email" class="form-control border border-dark" id="email" name="email" placeholder="Email">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -53,7 +53,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-key fa-1x"></i></div>
                                 </div>
-                                <input type="password" class="form-control border border-dark" id="" name="" placeholder="Passoword">
+                                <input type="password" class="form-control border border-dark" id="pass" name="pass" placeholder="Passoword">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-align-left fa-1x"></i></div>
                                 </div>
-                                <input type="text" class="form-control border border-dark" id="" name="" placeholder="Nama">
+                                <input type="text" class="form-control border border-dark" id="namacust" name="namacust" placeholder="Nama">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -72,7 +72,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-street-view fa-1x"></i></div>
                                 </div>
-                                <input type="text" class="form-control border border-dark" id="" name="" placeholder="Alamat">
+                                <input type="text" class="form-control border border-dark" id="alamatcust" name="alamatcust" placeholder="Alamat">
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-id-card fa-1x"></i></div>
                                 </div>
-                                <input type="text" class="form-control border border-dark" id="" name="" placeholder="No KTP">
+                                <input type="text" class="form-control border border-dark" id="ktp" name="ktp" placeholder="No KTP">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -91,7 +91,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-calendar-day fa-1x"></i></div>
                                 </div>
-                                <input type="date" class="form-control border border-dark text-dark" id="" name="" placeholder="Tanggal Lahir" title="Tanggal Lahir">
+                                <input type="date" class="form-control border border-dark text-dark" id="ttlcust" name="ttlcust" placeholder="Tanggal Lahir" title="Tanggal Lahir">
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark"><i class="fas fa-phone-alt fa-1x"></i></div>
                                 </div>
-                                <input type="text" class="form-control border border-dark" id="" name="" placeholder="Telepon">
+                                <input type="text" class="form-control border border-dark" id="telpcust" name="telpcust" placeholder="Telepon">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -110,17 +110,17 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark" for="inputGroupSelect01"><i class="fas fa-venus-mars fa-1x"></i></div>
                                 </div>
-                                <select class="custom-select border border-dark text-dark" id="inputGroupSelect01" name="">
+                                <select class="custom-select border border-dark text-dark" id="inputGroupSelect01" name="jkcust">
                                     <option disabled selected class="text-dark">Jenis Kelamin</option>
-                                    <option class="text-dark">Laki-laki</option>
-                                    <option class="text-dark">Perempuan</option>
+                                    <option class="text-dark" value="Laki-laki">Laki-laki</option>
+                                    <option class="text-dark" value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
                     <div class="modal-footer">
-                        <a href="<?= base_url()?>login"><button type="button" class="btn btn-outline-dark">SAVE</button></a>
+                        <button type="submit" class="btn btn-outline-dark">SAVE</button>
                     </div>
                 </form>
             </div>

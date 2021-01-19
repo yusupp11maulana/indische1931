@@ -51,7 +51,7 @@
               <div class="tab-pane fade show active" id="step-1" area-labelledby="step1-tab" role="tab-panel">
                 <div class="innerContent">
                   <div class="login-content justify-content-center">
-                    <form action="" method="POST">
+                    <form action="<?= base_url()?>login/login_customer" method="POST">
                       <div class="input-div one">
                         <div class="i">
                           <i class="fas fa-user"></i>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="div">
                           <h5>Password</h5>
-                          <input type="password" name="telp_mhs" class="input">
+                          <input type="password" name="password" class="input">
                         </div>
                       </div>
                       <input type="submit" class="btn2" value="Login">
