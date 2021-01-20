@@ -93,6 +93,12 @@
 							<span>Karyawan</span>
 						</a>
 					</li>
+					<li>
+						<a href="<?= base_url()?>admin/menu" class="items">
+							<i class="fa fa-book"></i>
+							<span>Menu</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
