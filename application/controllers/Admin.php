@@ -27,10 +27,18 @@ class Admin extends CI_Controller {
             redirect('login');
         }
     }
+    public function delmenu($id){
+        $this->Model_admin->deletemenu($id);
+    }
+
+    public function upmenu($id){
+        $this->Model_admin->activmenu($id);
+    }
 
     public function menu(){
         $login = $this->session->userdata('id_pegawai');
         if($login){
+            $data['menu'] = $this->Model_admin->viewmenu();
             $data['user'] = $login;
             $this->load->view('menu', $data);
         } else{
@@ -38,27 +46,12 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function Addmenu(){
+    public function addmenu(){
         $this->form_validation->set_rules('namamenu', 'required');
         $this->form_validation->set_rules('hargamenu', 'required');
         $this->form_validation->set_rules('jenismenu', 'required');
         if($this->form_validation->run() == false){
-            $data = array(
-            "nama_menu" => $this->input->post('namamenu', true),
-            "harga_menu" => $this->input->post('hargamenu', true),
-            "jenis_menu" => $this->input->post('jenismenu', true),
-        );
-        var_dump($data);die;
-            // redirect('admin/menu');
-        } else{
-            $data = array(
-            "nama_menu" => $this->input->post('namamenu', true),
-            "harga_menu" => $this->input->post('hargamenu', true),
-            "jenis_menu" => $this->input->post('jenismenu', true),
-        );
-        var_dump($data);die;
-            // $this->Model_admin->tambahmenu();
-            // redirect('admin/menu');
+            $this->Model_admin->tambahmenu();
         }
     }
 }

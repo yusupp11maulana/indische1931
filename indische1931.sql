@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jan 2021 pada 14.55
+-- Waktu pembuatan: 21 Jan 2021 pada 12.18
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -20,6 +20,51 @@ SET time_zone = "+00:00";
 --
 -- Database: `indische1931`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `customer`
+--
+
+CREATE TABLE `customer` (
+  `no_ktp` varchar(20) NOT NULL,
+  `nama_customer` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `alamat_customer` varchar(100) NOT NULL,
+  `jenis_kelamin` varchar(20) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `no_telp_customer` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `customer`
+--
+
+INSERT INTO `customer` (`no_ktp`, `nama_customer`, `email`, `password`, `alamat_customer`, `jenis_kelamin`, `tanggal_lahir`, `no_telp_customer`) VALUES
+('3578171611990001', 'Yusup Maulana', 'yusupp11maulana@gmail.com', 'yusup1611', 'Kedinding tengah', 'Laki-laki', '1999-11-16', '085549002851');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `menu`
+--
+
+CREATE TABLE `menu` (
+  `id_menu` int(11) NOT NULL,
+  `nama_menu` varchar(100) NOT NULL,
+  `harga_menu` int(11) NOT NULL,
+  `jenis_menu` varchar(200) NOT NULL,
+  `ket_menu` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `menu`
+--
+
+INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga_menu`, `jenis_menu`, `ket_menu`) VALUES
+(1, 'Americano Hot', 17000, 'Beverages', 'deactived');
 
 -- --------------------------------------------------------
 
@@ -72,6 +117,18 @@ INSERT INTO `role` (`id_role`, `nama_role`) VALUES
 --
 
 --
+-- Indeks untuk tabel `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`no_ktp`);
+
+--
+-- Indeks untuk tabel `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id_menu`);
+
+--
 -- Indeks untuk tabel `pegawai`
 --
 ALTER TABLE `pegawai`
@@ -87,6 +144,12 @@ ALTER TABLE `role`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `role`

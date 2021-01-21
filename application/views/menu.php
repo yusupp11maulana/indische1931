@@ -128,21 +128,29 @@
 										<th scope="col" class="sort" >Nama Menu</th>
 										<th scope="col" class="sort" >Harga</th>
                                         <th scope="col" class="sort" >Jenis</th>
+                                        <th scope="col" class="sort" >Status</th>
 										<th scope="col" class="sort" >Keterangan</th>
 									</tr>
 								</thead>
 								<tbody class="list">
+										<?php foreach ($menu as $m) :?>
 										<tr align="center">
-											<td>Menu001</td>
-											<td>Cappucino</td>
-											<td>23000</td>
-                                            <td>Beverages</td>
-											<td><button class="btn btn-sm btn-info">
+											<td><?= $m['id_menu'];?></td>
+											<td><?= $m['nama_menu'];?></td>
+											<td><?= $m['harga_menu'];?></td>
+                                            <td><?= $m['jenis_menu'];?></td>
+                                            <td><?= $m['ket_menu'];?></td>
+											<td>
+											<a href="upmenu/<?= $m['id_menu']; ?>"><button class="btn btn-sm btn-info">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">Delete</span>
-												</button>
+													<span class="btn-inner--text">Actived</span>
+												</button></a><a href="delmenu/<?=$m['id_menu']; ?>"><button class="btn btn-sm btn-danger">
+													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
+													<span class="btn-inner--text">Deavtived</span>
+												</button></a>
 											</td>
 										</tr>
+										<?php endforeach;?>
 								</tbody>
 							</table>
 						</div>
@@ -163,7 +171,7 @@
 									<h5 class="modal-title">Tambah Menu</h5>
 								</div>
 								<div class="modal-body">
-                                    <form role="form" action="addmenu" method="POST">
+                                    <form role="form" action="<?= base_url()?>admin/addmenu" method="POST">
                                         <div class="form-group mb-3">
                                             <div class="input-group input-group-merge input-group-alternative">
                                                 <input style="padding-left: 10px"class="form-control" name="namamenu" placeholder="Nama Menu" type="text">
@@ -174,7 +182,7 @@
                                                 <input style="padding-left: 10px"class="form-control" name="hargamenu" placeholder="Harga" type="text">
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group mb-3">
+                                        <div class="form-group mb-3">
                                             <div class="input-group input-group-merge input-group-alternative">
                                                 <select class="custom-select" id="inputGroupSelect01" name="jenismenu">
 													<option selected disabled>- Pilih Jenis -</option>
@@ -182,7 +190,7 @@
 													<option value="Foods">Foods</option>
 												</select>
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
