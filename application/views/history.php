@@ -67,7 +67,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item bg-warning" style="border-radius: 60px; ">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Log Out Account" rel="nofollow">LOGOUT</a>
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<?= base_url()?>login/logout" data-original-title="Log Out Account" rel="nofollow">Logout</a>
           </li>
         </ul>
       </div>
@@ -91,6 +91,9 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="container mb-5">
         <!-- Table -->
         <h3 class="mb-4">Pesanan Hari ini</h3>
+        <?php if($proses=="kosong"){?>
+        <h5 class="mt-5 mb-4">Silahkan memesan terlebih dahulu pada halaman Order Now</h5>
+        <?php }else{?>
         <div class="table-responsive rounded">
           <table class="table align-items-center table-light bg-light">
             <thead align="center" class="thead-dark" id="thead-row">
@@ -104,26 +107,26 @@ The above copyright notice and this permission notice shall be included in all c
               </tr>
             </thead>
             <tbody class="list thead-dark">
+              <?php foreach ($proses as $p) :?>
                 <tr align="center">
-                  <td>Det001</td>
-                  <td>Cappucino</td>
-                  <td>2</td>
-                  <td>Rp 25000</td>
-                  <td>Rp 50000</td>
-                  <td><span class="badge badge-success">Ready</span></td>
+                  <td><?= $p['id_detail']?></td>
+                  <td><?= $p['nama_menu']?></td>
+                  <td><?= $p['jumlah_order']?></td>
+                  <td><?= $p['harga_menu']?></td>
+                  <td><?= $p['harga_order']?></td>
+                  <td><?php if($p['status_order'] == "On Proses"){?>
+                    <span class="badge badge-warning"><?= $p['status_order']?></span>
+                    <?php }else{?>
+                    <span class="badge badge-success"><?= $p['status_order']?></span>
+                    <?php }?>
+                    </td>
                 </tr>
-                <tr align="center">
-                  <td>Det002</td>
-                  <td>Spagheti Bolognese</td>
-                  <td>1</td>
-                  <td>Rp 30000</td>
-                  <td>Rp 30000</td>
-                  <td><span class="badge badge-warning">On Proccess</span></td>
-                </tr>
+              <?php endforeach;?>  
             </tbody>
           </table>
         </div>
         <!-- /Table -->
+        <?php }?>
       </div>
     </div>
   </div>
@@ -140,34 +143,29 @@ The above copyright notice and this permission notice shall be included in all c
                 <th scope="col" class="sort" >Tanggal Order</th>
                 <th scope="col" class="sort" >Meja</th>
                 <th scope="col" class="sort" >Jumlah Menu</th>
-                <th scope="col" class="sort" >Total Pembayaran</th>
+                <th scope="col" class="sort" >Total</th>
+                <th scope="col" class="sort" >Nominal</th>
+                <th scope="col" class="sort" >Kembalian</th>
                 <th scope="col" class="sort" >Keterangan</th>
                 <th scope="col">Opsi</th>
               </tr>
             </thead>
             <tbody class="list">
+              <?php foreach($orderan as $o):?>
                 <tr align="center">
-                  <td>Ord001</td>
-                  <td>15/12/2020</td>
-                  <td>20</td>
-                  <td>3</td>
-                  <td>Rp 50.000</td>
-                  <td><span class="badge badge-success">Lunas</span></td>
+                  <td><?= $o['id_order']?></td>
+                  <td><?= $o['tgl_order']?></td>
+                  <td><?= $o['nama_meja']?></td>
+                  <td><?= $o['jumlah_orderan']?></td>
+                  <td><?= $o['total_harga']?></td>
+                  <td><?= $o['pembayaran']?></td>
+                  <td><?= $o['kembalian']?></td>
+                  <td><?php if($o['status_bayar'] == "Belum Terbayar"){?>
+                    <span class="badge badge-warning"><?= $o['status_bayar']?></span>
+                    <?php }else{?>
+                    <span class="badge badge-success"><?= $o['status_bayar']?></span>
+                    <?php }?></td>
                   <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
-                      <span class="btn-inner--icon material-icons">open_in_new</span>
-                      <span class="btn-inner--text">Detail Order</span>
-                    </button>
-                  </td>
-                </tr>
-                <tr align="center">
-                  <td>Ord002</td>
-                  <td>15/12/2020</td>
-                  <td>21</td>
-                  <td>3</td>
-                  <td>Rp 150.000</td>
-                  <td><span class="badge badge-success">Lunas</span></td>
-                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
-                      <span class="btn-inner--icon material-icons">open_in_new</span>
                       <span class="btn-inner--text">Detail Order</span>
                     </button>
                   </td>
@@ -194,6 +192,7 @@ The above copyright notice and this permission notice shall be included in all c
                   </div>
                 </div>
               <!--  End Modal -->
+              <?php endforeach;?>
             </tbody>
           </table>
         </div>

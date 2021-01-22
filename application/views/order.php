@@ -19,7 +19,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="./asset/img/indische/logo.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Indische1931 Cafe - History
+    Indische1931 Cafe - Order
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -90,7 +90,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="section">
         <div class="container text-center">
           <h2 class="title">Denah Kafe</h2>
-          <img src="./asset/img/indische/denah.png" alt="" style="width: 40%">
+          <img src="./asset/img/indische/denah.png" alt="" style="width: 50%">
         </div>
       </div>
     <!-- /Denah-->
@@ -114,37 +114,31 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <!-- /Menu -->
 
-    <!-- FORM Menu -->
-    <form action="">
+    <!-- FORM Menu Minuman -->
+    <form action="Order/addbev" method="POST">
       <div class="container">
         <div id="inputs" class="ml-5 pl-5">
           <div class="row ml-5 pl-5">
             <div class="col-lg-4 col-sm-4 mt-4 ml-5">
               <div class="form-group">
-                <select class="form-control pl-3" name="kode_produk">
-                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu -</option>
-                  <?php foreach ($menu as $pilih) :
-                    echo $pilih['body_menu'];
-                  endforeach;
+                <select class="form-control pl-3" name="idmenu">
+                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu Minuman -</option>
+                  <?php foreach ($menub as $pilih) :?>
+                    <option value="<?= $pilih['id_menu']?>"><?= $pilih['nama_menu']?></option>
+                  <?php endforeach;
                   ?>
-                  <!-- <option disabled></option>
-                  <option disabled style="font-weight: bold; color: #8C6232">COFFEE</option>
-                  <option >Americano</option>
-                  <option >Cappucino</option>
-                  <option disabled></option>
-                  <option disabled style="font-weight: bold; color: #8C6232">CRUNCHY CREAM</option>
-                  <option >Cookies</option>
-                  <option >Regal</option> -->
                 </select>
               </div>
             </div>
             <div class="col-lg-3 col-sm-4">
               <div class="form-group">
                 <label for="exampleInput1" class="bmd-label-floating">Total Pesanan</label>
-                <input type="number" class="form-control" id="exampleInput1">
-                <span class="bmd-help">Banyaknya orderan yang di pesan berupa angka</span>
+                <input type="number" class="form-control" id="exampleInput1" name="jumlah">
               </div>
             </div>
+                <input type="text" class="form-control" id="exampleInput1" name="kodedet" value="<?= $kodedet?>" hidden>
+                <input type="text" class="form-control" id="exampleInput1" name="noktp" value="<?= $ktp?>" hidden>
+                <input type="text" class="form-control" id="exampleInput1" name="kodeord" value="<?= $kodeord?>" hidden>
             <div class="col-lg-3 col-sm-4 mt-4">
               <div class="form-group">
                 <button type="Submit" class="btn btn-info btn-sm">Tambahkan</button>
@@ -154,28 +148,91 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     </form>
-    <!-- Form Menu -->
+    <!-- Form Menu Minuman-->
 
-    <!-- Form Transaksi -->
-    <form action="">
+    <!-- FORM Menu makanan -->
+    <form action="Order/addbev" method="POST">
       <div class="container">
         <div id="inputs" class="ml-5 pl-5">
           <div class="row ml-5 pl-5">
             <div class="col-lg-4 col-sm-4 mt-4 ml-5">
               <div class="form-group">
-                <select class="form-control pl-3" name="kode_produk">
-                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Meja -</option>
-                  <option >Meja 1</option>
-                  <option >Meja 2</option>
-                  <option >Meja 3</option>
-                  <option >Meja 4</option>
-                  <option >Meja 5</option>
+                <select class="form-control pl-3" name="idmenu">
+                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Menu Makanan -</option>
+                  <?php foreach ($menuf as $pilihf) :?>
+                    <option value="<?= $pilihf['id_menu']?>"><?= $pilihf['nama_menu']?></option>
+                  <?php endforeach;
+                  ?>
                 </select>
               </div>
             </div>
+            <div class="col-lg-3 col-sm-4">
+              <div class="form-group">
+                <label for="exampleInput1" class="bmd-label-floating">Total Pesanan</label>
+                <input type="number" class="form-control" id="exampleInput1" name="jumlah">
+              </div>
+            </div>
+            <input type="text" class="form-control" id="exampleInput1" name="kodedet" value="<?= $kodedet?>" hidden>
+            <input type="text" class="form-control" id="exampleInput1" name="noktp" value="<?= $ktp?>" hidden>
+            <input type="text" class="form-control" id="exampleInput1" name="kodeord" value="<?= $kodeord?>" hidden>
             <div class="col-lg-3 col-sm-4 mt-4">
               <div class="form-group">
-                <button type="Submit" class="btn btn-info btn-round">Order</button>
+                <button type="Submit" class="btn btn-info btn-sm">Tambahkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Form Menu makanan-->
+
+    <div class="container">
+      <h3 class="ml-5">Keranjang</h3>
+      <div class="container text-center">
+        <table class="table">
+          <tbody>
+            <?php foreach ($vieword as $vo):?>
+              <tr>
+                <td><?= $vo['nama_menu']?></td>
+                <td><?= $vo['harga_menu']?></td>
+                <td><?= $vo['jumlah_order']?></td>
+                <td><?= $vo['harga_order']?></td>
+                <td><a href="order/deletedet/<?= $vo['id_detail']; ?>" title="Delete"><button class="btn btn-sm btn-danger" type="button">
+                      <span class="btn-inner--text">Delete</span>
+                    </button>
+                  </a>
+                </td>
+              </tr>
+            <?php endforeach;?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <h4 class="ml-5">Harga Total : Rp <?= $hatot?></h4>
+    </div>
+
+    <!-- Form Transaksi -->
+    <form action="Order/addorder" method="POST">
+      <div class="container">
+        <div id="inputs" class="ml-5 pl-5">
+          <div class="row ml-5 pl-5">
+            <div class="col-lg-4 col-sm-4 mt-4 ml-5">
+              <div class="form-group">
+                <select class="form-control pl-3" name="meja">
+                  <option disabled selected style="font-weight: bold; color: #8C6232">- Pilih Meja -</option>
+                  <?php foreach ($meja as $mj) :?>
+                    <option value="<?= $mj['id_meja']?>"><?= $mj['nama_meja']." ("." ".$mj['pax_meja']." Pax )"?></option>
+                  <?php endforeach;?>
+                </select>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="exampleInput1" name="noktp" value="<?= $ktp?>" hidden>
+            <input type="text" class="form-control" id="exampleInput1" name="hatot" value="<?= $hatot?>" hidden>
+            <input type="text" class="form-control" id="exampleInput1" name="kodeord" value="<?= $kodeord?>" hidden>
+            <div class="col-lg-3 col-sm-4 mt-4">
+              <div class="form-group">
+                <button type="Submit" class="btn btn-success btn-round">Order</button>
               </div>
             </div>
           </div>
