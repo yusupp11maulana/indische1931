@@ -91,9 +91,6 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="container mb-5">
         <!-- Table -->
         <h3 class="mb-4">Pesanan Hari ini</h3>
-        <?php if($proses=="kosong"){?>
-        <h5 class="mt-5 mb-4">Silahkan memesan terlebih dahulu pada halaman Order Now</h5>
-        <?php }else{?>
         <div class="table-responsive rounded">
           <table class="table align-items-center table-light bg-light">
             <thead align="center" class="thead-dark" id="thead-row">
@@ -102,7 +99,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <th scope="col" class="sort" >Nama Menu</th>
                 <th scope="col" class="sort" >Jumlah</th>
                 <th scope="col" class="sort" >Harga</th>
-                <th scope="col" class="sort" >Total Pembayaran</th>
+                <th scope="col" class="sort" >Total Harga</th>
                 <th scope="col" class="sort" >Keterangan</th>
               </tr>
             </thead>
@@ -126,7 +123,6 @@ The above copyright notice and this permission notice shall be included in all c
           </table>
         </div>
         <!-- /Table -->
-        <?php }?>
       </div>
     </div>
   </div>
@@ -165,27 +161,41 @@ The above copyright notice and this permission notice shall be included in all c
                     <?php }else{?>
                     <span class="badge badge-success"><?= $o['status_bayar']?></span>
                     <?php }?></td>
-                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
+                  <td><button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal<?= $o['id_order']?>" type="button">
                       <span class="btn-inner--text">Detail Order</span>
                     </button>
                   </td>
                 </tr>
                 <!-- Classic Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal fade" id="myModal<?= $o['id_order']?>" tabindex="-1" role="dialog">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
+                        <h5 class="modal-title">Detail Pesanan</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <i class="material-icons">clear</i>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-                        </p>
+                        <?php $id=$o['id_order'];
+                          $this->db->where('id_order', $id);
+                          $this->db->join('menu','menu.id_menu=detail_order.id_menu');
+                          $query = $this->db->get('detail_order')->result_array();
+                          foreach($query as $q):
+                        ?>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col">
+                              <p><?= $q['nama_menu']?></p>
+                            </div>
+                            <div class="col">
+                              <p><?= $q['jumlah_order']?> Pax</p>
+                            </div>
+                          </div>
+                        </div>
+                        <?php endforeach;?>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-link">Nice Button</button>
                         <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
                       </div>
                     </div>

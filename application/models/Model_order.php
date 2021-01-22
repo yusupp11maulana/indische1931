@@ -61,6 +61,7 @@ class Model_order extends CI_model
             "jumlah_order" => $jumlah,
             "harga_order" => $total,
             "status_order" => $status,
+            "statusnya" => "Belum Terbayar",
         );
         $this->db->insert('detail_order', $data);
         redirect('order');
