@@ -182,6 +182,7 @@
 										<th scope="col" class="sort" >Meja</th>
 										<th scope="col" class="sort" >Jumlah Order</th>
 										<th scope="col" class="sort" >Total</th>
+										<th scope="col" class="sort" >Status</th>
 										<th scope="col" class="sort" >Keterangan</th>
 									</tr>
 								</thead>
@@ -194,6 +195,11 @@
 											<td><?= $vo['nama_meja'];?></td>
 											<td><?= $vo['jumlah_orderan'];?> Pax</td>
 											<td>Rp <?= $vo['total_harga'];?></td>
+											<?php if($vo['status_bayar']=="Belum Terbayar"){?>
+												<td><span class="badge badge-danger"><?= $vo['status_bayar'];?></span></td>
+											<?php } else{?>
+												<td><span class="badge badge-success"><?= $vo['status_bayar'];?></span></td>
+											<?php };?>
                                             <td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal<?= $vo['id_order'];?>" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Rincian</span></td>
@@ -206,8 +212,8 @@
 														<div class="modal-body">
 															<?php $id=$vo['id_order'];
 																$this->db->where('id_order', $id);
-																$this->db->join('menu','menu.id_menu=detail_order.id_menu');
-																$query = $this->db->get('detail_order')->result_array();
+																$this->db->join('menu','menu.id_menu=detail.id_menu');
+																$query = $this->db->get('detail')->result_array();
 																foreach($query as $q):
 																?>
 																<div class="container">
@@ -228,7 +234,7 @@
 																	$id=$vo['id_order'];
 																	$this->db->where('id_order', $id);
 																	$this->db->select_sum('harga_order');
-																	$query = $this->db->get('detail_order')->result_array();
+																	$query = $this->db->get('detail')->result_array();
 																	foreach ($query as $q) :?>
 																	<div class="container mt-5">
 																		<div class="row">

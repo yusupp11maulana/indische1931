@@ -26,11 +26,14 @@ class Admin extends CI_Controller {
         $login = $this->session->userdata('id_pegawai');
         if($login){
             $data['user'] = $login;
+            $data['id'] = $this->Model_admin->nomer();
+            $data['view'] = $this->Model_admin->viewpeg();
             $this->load->view('karyawan', $data);
         } else{
             redirect('login');
         }
     }
+
     public function delmenu($id){
         $this->Model_admin->deletemenu($id);
     }
@@ -53,5 +56,34 @@ class Admin extends CI_Controller {
     public function addmenu(){
         $this->Model_admin->tambahmenu();
         
+    }
+
+    public function insertpeg(){
+        $this->form_validation->set_rules('nama','nama', 'required');
+        $this->form_validation->set_rules('alamat','alamat', 'required');
+        $this->form_validation->set_rules('ttlpeg','ttl', 'required');
+        $this->form_validation->set_rules('notelp','telp', 'required');
+        $this->form_validation->set_rules('id_role','role', 'required');
+        if($this->form_validation->run() == false){
+            redirect('admin/karyawan');
+        } else{
+            $this->Model_admin->insertpegawai();
+        }
+    }
+    
+    public function updatepeg(){
+        $this->form_validation->set_rules('nama','nama', 'required');
+        $this->form_validation->set_rules('alamat','alamat', 'required');
+        $this->form_validation->set_rules('notelp','telp', 'required');
+        $this->form_validation->set_rules('id_role','role', 'required');
+        if($this->form_validation->run() == false){
+            redirect('admin/karyawan');
+        } else{
+            $this->Model_admin->updatepegawai();
+        }
+    }
+
+    public function delete($id){
+        $this->Model_admin->deletepeg($id);
     }
 }

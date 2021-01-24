@@ -25,7 +25,7 @@ class Model_order extends CI_model
     }
 
     function kodedet(){
-        $query = $this->db->query("SELECT MAX(id_detail) as kodedet FROM detail_order")->row_array()['kodedet'];
+        $query = $this->db->query("SELECT MAX(id_detail) as kodedet FROM detail")->row_array()['kodedet'];
         $urutan = (int) substr($query, 3, 5);
         $urutan++;
         $simbol = "Det";
@@ -69,7 +69,7 @@ class Model_order extends CI_model
             "statusnya" => "Belum Terbayar",
             "jm" => $jm,
         );
-        $this->db->insert('detail_order', $data);
+        $this->db->insert('detail', $data);
         redirect('order');
     }
 
@@ -79,16 +79,16 @@ class Model_order extends CI_model
         $this->db->select('jumlah_order');
         $this->db->select('harga_order');
         $this->db->select('id_detail');
-        $this->db->from('detail_order');
+        $this->db->from('detail');
         $this->db->where('no_ktp',$ktp);
         $this->db->where('id_order',$idm);
-        $this->db->join('menu','menu.id_menu=detail_order.id_menu');
+        $this->db->join('menu','menu.id_menu=detail.id_menu');
         return $this->db->get()->result_array();
     }
 
     public function hapus($id){
         $this->db->where('id_detail', $id);
-        $this->db->delete('detail_order');
+        $this->db->delete('detail');
         redirect('order');
     }
 
@@ -96,7 +96,7 @@ class Model_order extends CI_model
         $this->db->where('no_ktp',$ktp);
         $this->db->where('id_order',$idm);
         $this->db->select_sum('harga_order');
-        $query = $this->db->get('detail_order')->result_array();
+        $query = $this->db->get('detail')->result_array();
         foreach ($query as $q) :
             $harga = $q['harga_order'];
         endforeach;
@@ -107,7 +107,7 @@ class Model_order extends CI_model
         $kode = $this->input->post('kodeord', true);
         $this->db->where('id_order', $kode);
         $this->db->select_sum('jumlah_order');
-        $query = $this->db->get('detail_order')->result_array();
+        $query = $this->db->get('detail')->result_array();
         foreach ($query as $q) :
             $jumlah = $q['jumlah_order'];
         endforeach;

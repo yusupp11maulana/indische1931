@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="<?= base_url()?>assets/vendors/fontawesome/css/all.css">
 	<!-- Icon LineAwesome CSS-->
 	<link rel="stylesheet" href="<?= base_url()?>assets/vendors/lineawesome/css/line-awesome.min.css">
-	 <!-- Argon datepicker -->
+	<!-- Argon datepicker -->
     <script type="text/javascript" src="<?= base_url()?>assets/js/digitalDate.js"></script>
 
 	<!-- ICON WEB -->
@@ -25,7 +25,7 @@
 </head>
 <body onload="initClock()">
   
-  <!--Topbar -->
+<!--Topbar -->
 	<div class="topbar transition bg-warning">
 		<div class="bars">
 			<button type="button" class="btn transition" id="sidebar-toggle">
@@ -134,59 +134,80 @@
 									</tr>
 								</thead>
 								<tbody class="list">
+									<?php foreach($view as $v):?>
 										<tr align="center">
-											<td>Pgw001</td>
-											<td>Bayu</td>
-											<td>19/05/1999</td>
-                                            <td>Jl. Banyu Urip Lor No.78</td>
-											<td>085773827462</td>
-                                            <td>Kasir</td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" type="button">
+											<td><?= $v['id_pegawai']?></td>
+											<td><?= $v['nama_pegawai']?></td>
+											<td><?= $v['tanggal_lahir']?></td>
+											<td><?= $v['alamat_pegawai']?></td>
+											<td><?= $v['no_telp_pegawai']?></td>
+											<td><?= $v['nama_role']?></td>
+											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal<?= $v['id_pegawai']?>" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Edit</span>
 												</button>
-												<button class="btn btn-sm btn-info">
-													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">Delete</span>
-												</button>
-											</td>
-										</tr>
-										<tr align="center">
-											<td>Pgw002</td>
-											<td>Amin</td>
-											<td>15/12/1996</td>
-                                            <td>Jl.Petemon Barat No.102</td>
-											<td>088173649382</td>
-                                            <td>Kitchen</td>
-											<td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Edit</span>
-												</button>
+												<a href="<?= base_url()?>admin/delete/<?= $v['id_pegawai']?>">
 												<button class="btn btn-sm btn-info" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
 													<span class="btn-inner--text">Delete</span>
 												</button>
+												</a>
 											</td>
 										</tr>
 										<!-- Classic Modal -->
-										<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-											<div class="modal-dialog modal-dialog-centered" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title">Edit Pegawai</h5>
-													</div>
-													<div class="modal-body">
-														<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-														</p>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-link">Nice Button</button>
-														<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-													</div>
+											<div class="modal fade" id="myModal<?= $v['id_pegawai']?>" tabindex="-1" role="dialog">
+												<div class="modal-dialog modal-dialog-centered" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title">Edit Pegawai</h5>
+														</div>
+														<div class="modal-body">
+															<form role="form" action="<?php base_url()?>updatepeg" method="POST">
+																<div class="form-group mb-3">
+																	<div class="input-group input-group-merge input-group-alternative">
+																		<input style="padding-left: 10px"class="form-control" name="id" placeholder="ID Stok" type="text" value="<?= $v['id_pegawai']?>" readonly>
+																	</div>
+																</div>
+
+																
+																<div class="form-group mb-3">
+																	<div class="input-group input-group-merge input-group-alternative">
+																		<input style="padding-left: 10px"class="form-control" name="nama" placeholder="Nama Pegawai" value="<?= $v['nama_pegawai']?>" type="text">
+																	</div>
+																</div>
+
+																<div class="form-group mb-3">
+																	<div class="input-group input-group-merge input-group-alternative">
+																		<input style="padding-left: 10px"class="form-control" name="alamat" placeholder="Alamat" value="<?= $v['alamat_pegawai']?>" type="text">
+																	</div>
+																</div>
+
+																<div class="form-group mb-3">
+																	<div class="input-group input-group-merge input-group-alternative">
+																		<input style="padding-left: 10px"class="form-control" name="notelp" placeholder="No_telp" value="<?= $v['no_telp_pegawai']?>" type="text">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<div class="input-group input-group-merge input-group-alternative">
+																		<select class="custom-select select2" name="id_role">
+																			<option selected value="<?= $v['id_role']?>"><?= $v['nama_role']?></option>
+																			<option value="2">Kasir</option>
+																			<option value="3">Bar</option>
+																			<option value="4">Kitchen</option>
+																		</select>
+																	</div>
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+																	<button type="submit" class="btn btn-primary">Simpan</button>
+																</div>
+															</form>
+														</div>
 												</div>
 											</div>
-										</div>
-									<!--  End Modal -->
+										<!--  End Modal -->
+									<?php endforeach;?>
 								</tbody>
 								
 							</table>
@@ -208,14 +229,53 @@
 									<h5 class="modal-title">Tambah Pegawai</h5>
 								</div>
 								<div class="modal-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-									</p>
+									<form role="form" action="<?php base_url()?>insertpeg" method="POST">
+										<div class="form-group mb-3">
+											<div class="input-group input-group-merge input-group-alternative">
+												<input style="padding-left: 10px"class="form-control" name="id" placeholder="ID Stok" type="text" value="<?= $id?>" readonly>
+											</div>
+										</div>
+
+										
+										<div class="form-group mb-3">
+											<div class="input-group input-group-merge input-group-alternative">
+												<input style="padding-left: 10px"class="form-control" name="nama" placeholder="Nama Pegawai" type="text">
+											</div>
+										</div>
+
+										<div class="form-group mb-3">
+											<div class="input-group input-group-merge input-group-alternative">
+											<input type="date" class="form-control border border-dark text-dark" id="ttlpeg" name="ttlpeg" placeholder="Tanggal Lahir" title="Tanggal Lahir">
+											</div>
+										</div>
+
+										<div class="form-group mb-3">
+											<div class="input-group input-group-merge input-group-alternative">
+												<input style="padding-left: 10px"class="form-control" name="alamat" placeholder="Alamat" type="text">
+											</div>
+										</div>
+										<div class="form-group mb-3">
+											<div class="input-group input-group-merge input-group-alternative">
+												<input style="padding-left: 10px"class="form-control" name="notelp" placeholder="No_telp" type="text">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="input-group input-group-merge input-group-alternative">
+												<select class="custom-select select2" name="id_role">
+													<option selected disabled>- Plih Department -</option>
+													<option value="2">Kasir</option>
+													<option value="3">Bar</option>
+													<option value="4">Kitchen</option>
+												</select>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+											<button type="submit" class="btn btn-primary">Simpan</button>
+										</div>
+									</form>
 								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-link">Nice Button</button>
-									<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-								</div>
-							</div>
 						</div>
 					</div>
 				<!--  End Modal -->
@@ -227,13 +287,6 @@
 
 	</div>
 
-	<!-- Footer -->
-	<div class="footer transition">
-		<hr>
-		<p>
-			&copy; 2020 All Right Reserved by <a href="#" target="_blank">DWAdmin</a>
-		</p>
-	</div>
 
 	<!-- Loader -->
 	<div class="loader">

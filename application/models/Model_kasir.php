@@ -49,7 +49,7 @@ class Model_kasir extends CI_model
         $harganya = $harga;
         $kembalian = $uang - $harganya;
         $data=array(
-            "id_pegawai" => $id,
+            "id_pegawai" => $pgw,
             "pembayaran" => $uang,
             "kembalian" => $kembalian,
             "Status_bayar" => "Terbayar",

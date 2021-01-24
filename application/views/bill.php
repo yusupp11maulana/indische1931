@@ -205,8 +205,8 @@
 															<div class="modal-body">
 																<?php $id=$vo['id_order'];
 																	$this->db->where('id_order', $id);
-																	$this->db->join('menu','menu.id_menu=detail_order.id_menu');
-																	$query = $this->db->get('detail_order')->result_array();
+																	$this->db->join('menu','menu.id_menu=detail.id_menu');
+																	$query = $this->db->get('detail')->result_array();
 																	foreach($query as $q):?>
 																<div class="container">
 																	<div class="row">
@@ -226,7 +226,7 @@
 																	$id=$vo['id_order'];
 																	$this->db->where('id_order', $id);
 																	$this->db->select_sum('harga_order');
-																	$query = $this->db->get('detail_order')->result_array();
+																	$query = $this->db->get('detail')->result_array();
 																	foreach ($query as $q) :?>
 																	<div class="container mt-5">
 																		<div class="row">

@@ -6,8 +6,8 @@ class Model_history extends CI_model
         $status="Belum Terbayar";
         $this->db->where('no_ktp', $ktp);
         $this->db->where('statusnya', $status);
-        $this->db->join('menu', 'menu.id_menu=detail_order.id_menu');
-        return $this->db->get('detail_order')->result_array();
+        $this->db->join('menu', 'menu.id_menu=detail.id_menu');
+        return $this->db->get('detail')->result_array();
     }
 
 
