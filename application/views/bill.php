@@ -86,7 +86,7 @@
 					</li>
 					<li>
 						<a href="<?= base_url() ?>kasir/bill" class="items">
-							<i class="fa fa-tachometer-alt"></i>
+							<i class="fa fa-dollar-sign"></i>
 							<span>Bill</span>
 						</a>
 					</li>
@@ -113,8 +113,8 @@
 									<i class="las la-clipboard-list icon-home bg-success text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Orders</p>
-									<h5>3000</h5>
+									<p>Orders Total</p>
+									<h5><?= $order?></h5>
 								</div>
 							</div>
 						</div>
@@ -129,8 +129,8 @@
 									<i class="las la-hamburger icon-home bg-primary text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Foods</p>
-									<h5>100</h5>
+									<p>Foods Today</p>
+									<h5><?= $foods?></h5>
 								</div>
 							</div>
 						</div>
@@ -145,8 +145,8 @@
 									<i class="las la-coffee  icon-home bg-info text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Drinks</p>
-									<h5>100</h5>
+									<p>Beverages Today</p>
+									<h5><?= $bev?></h5>
 								</div>
 							</div>
 						</div>
@@ -170,64 +170,121 @@
 										<th scope="col" class="sort" >Tanggal Pesan</th>
 										<th scope="col" class="sort" >Meja</th>
 										<th scope="col" class="sort" >Total</th>
-										<th scope="col">Opsi</th>
 										<th scope="col" class="sort" >Keterangan</th>
+										<th scope="col">Opsi</th>
 									</tr>
 								</thead>
 								<tbody class="list">
+									<?php foreach($orders as $vo):?>
 										<tr align="center">
-											<td>Ord001</td>
-											<td>Bima</td>
-											<td>15/12/2020</td>
-											<td>20</td>
-											<td>200000</td>
-											<td><span class="badge badge-danger">Belum Terbayar</span></td>
-											<td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#updateModal" type="button">
+											<td><?= $vo['id_order'];?></td>
+											<td><?= $vo['nama_customer'];?></td>
+											<td><?= $vo['tgl_order'];?></td>
+											<td><?= $vo['nama_meja'];?></td>
+											<td>Rp <?= $vo['total_harga'];?></td>
+											<?php if($vo['status_bayar']=="Belum Terbayar"){?>
+												<td><span class="badge badge-danger"><?= $vo['status_bayar'];?></span></td>
+											<?php } else{?>
+												<td><span class="badge badge-success"><?= $vo['status_bayar'];?></span></td>
+											<?php };?>
+                                            <td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#bayar<?= $vo['id_order'];?>" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
 													<span class="btn-inner--text">Bayar</span>
 												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
+												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal<?= $vo['id_order'];?>" type="button">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">View</span>
+													<span class="btn-inner--text">View</span></td>
 												</button>
-											</td>
-										</tr>
-										<tr align="center">
-											<td>Ord002</td>
-											<td>Ucup</td>
-											<td>15/12/2020</td>
-											<td>21</td>
-											<td>50000</td>
-											<td><span class="badge badge-success">Terbayar</span></td>
-											<td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#updateModal" type="button" disabled>
-													<span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-													<span class="btn-inner--text">Bayar</span>
-												</button>
-												<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" type="button">
-													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">View</span>
-												</button>
-											</td>
-										</tr>
-										<!-- Classic Modal -->
-										<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-											<div class="modal-dialog modal-dialog-centered" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title">Modal title</h5>
-													</div>
-													<div class="modal-body">
-														<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-														</p>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-link">Nice Button</button>
-														<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+												<!-- Modal View -->
+												<div class="modal fade" id="myModal<?= $vo['id_order'];?>" tabindex="-1" role="dialog">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title">Rincian order</h5>
+															</div>
+															<div class="modal-body">
+																<?php $id=$vo['id_order'];
+																	$this->db->where('id_order', $id);
+																	$this->db->join('menu','menu.id_menu=detail_order.id_menu');
+																	$query = $this->db->get('detail_order')->result_array();
+																	foreach($query as $q):?>
+																<div class="container">
+																	<div class="row">
+																		<div class="col">
+																			<p><?= $q['nama_menu']?></p>
+																		</div>
+																		<div class="col">
+																			<p><?= $q['jumlah_order']?> Pax</p>
+																		</div>
+																		<div class="col">
+																			<p>Rp <?= $q['harga_order']?></p>
+																		</div>
+																	</div>
+																</div>
+																	<?php endforeach;?>
+																<?php 
+																	$id=$vo['id_order'];
+																	$this->db->where('id_order', $id);
+																	$this->db->select_sum('harga_order');
+																	$query = $this->db->get('detail_order')->result_array();
+																	foreach ($query as $q) :?>
+																	<div class="container mt-5">
+																		<div class="row">
+																			<div class="col">
+																				<h5>Total Harga : Rp <?= $q['harga_order'];?> </h5>
+																			</div>
+																		</div>
+																	</div>
+																<?php endforeach;?>
+															</div>
+															<div class="modal-footer">
+																<?php if($vo['promo']==""){?>
+																	<form role="form" action="<?= base_url()?>kasir/promoblackcard" method="POST">
+																		<div class="form-group mb-3">
+																			<div class="input-group input-group-merge input-group-alternative">
+																				<input style="padding-left: 10px"class="form-control" name="id" placeholder="Harga" type="text" value="<?= $vo['id_order']?>" hidden>
+																			</div>
+																		</div>
+																		<button type="submit" class="btn btn-dark">Promo BlackCard</button>
+																	</form>
+																<?php }else{?>
+																<span class="badge badge-dark">Promo <?= $vo['promo'];?></span>
+																<?php }?>
+																<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+															</div>
+														</div>
 													</div>
 												</div>
-											</div>
-										</div>
-									<!--  End Modal -->
+												<!-- /end modal -->
+												<!-- Modal bayar -->
+												<div class="modal fade" id="bayar<?= $vo['id_order'];?>" tabindex="-1" role="dialog">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title">Pembayaran</h5>
+															</div>
+															<div class="modal-body">
+																<form role="form" action="<?= base_url()?>kasir/bayar" method="POST">
+																	<div class="form-group mb-3">
+																		<div class="input-group input-group-merge input-group-alternative">
+																			<input style="padding-left: 10px"class="form-control" name="bayar" placeholder="Nominal Pembayaran" type="text">
+																			<input style="padding-left: 10px"class="form-control" name="id" placeholder="Harga" type="text" value="<?= $vo['id_order']?>" hidden>
+																			<input style="padding-left: 10px"class="form-control" name="pgw" placeholder="Harga" type="text" value="<?= $user?>" hidden>
+																			<input style="padding-left: 10px"class="form-control" name="meja" placeholder="Harga" type="text" value="<?= $vo['id_meja']?>" hidden>
+
+																		</div>
+																	</div>
+															</div>
+															<div class="modal-footer">
+																	<button type="submit" class="btn btn-danger btn-link">Bayar</button>
+															</div>
+																</form>
+														</div>
+													</div>
+												</div>
+												<!-- End Modal -->
+										</tr>
+									<?php endforeach;?>
 								</tbody>
 								
 							</table>

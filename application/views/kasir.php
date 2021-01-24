@@ -85,7 +85,7 @@
 					</li>
 					<li>
 						<a href="<?= base_url()?>kasir/bill" class="items">
-							<i class="fa fa-tachometer-alt"></i>
+							<i class="fa fa-dollar-sign"></i>
 							<span>Bill</span>
 						</a>
 					</li>
@@ -112,8 +112,8 @@
 									<i class="las la-clipboard-list icon-home bg-success text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Orders</p>
-									<h5>3000</h5>
+									<p>Orders Total</p>
+									<h5><?= $order?></h5>
 								</div>
 							</div>
 						</div>
@@ -128,8 +128,8 @@
 									<i class="las la-hamburger icon-home bg-primary text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Foods</p>
-									<h5>100</h5>
+									<p>Foods Today</p>
+									<h5><?= $foods?></h5>
 								</div>
 							</div>
 						</div>
@@ -144,8 +144,8 @@
 									<i class="las la-coffee  icon-home bg-info text-light"></i>
 								</div>
 								<div class="col-8">
-									<p>Drinks</p>
-									<h5>100</h5>
+									<p>Beverages Today</p>
+									<h5><?= $bev?></h5>
 								</div>
 							</div>
 						</div>
@@ -167,31 +167,32 @@
 										<th scope="col" class="sort" >ID Pesanan</th>
 										<th scope="col" class="sort" >Nama Customer</th>
 										<th scope="col" class="sort" >Tanggal Order</th>
+										<th scope="col" class="sort" >Waktu</th>
 										<th scope="col" class="sort" >Meja</th>
-										<th scope="col" class="sort" >Makanan</th>
-                                        <th scope="col" class="sort" >Minuman</th>
+										<th scope="col" class="sort" >Total</th>
+                                        <th scope="col" class="sort" >Pembayaran</th>
+										<th scope="col" class="sort" >Kembalian</th>
 										<th scope="col" class="sort" >Keterangan</th>
 									</tr>
 								</thead>
 								<tbody class="list">
+									<?php foreach($orderan as $o) :?>
 										<tr align="center">
-											<td>Ord001</td>
-											<td>Bima</td>
-											<td>15/12/2020</td>
-											<td>21</td>
-											<td>3</td>
-                                            <td>2</td>
-											<td><span class="badge badge-danger">Belum Bayar</span></td>
+											<td><?= $o['id_order']?></td>
+											<td><?= $o['nama_customer']?></td>
+											<td><?= $o['tgl_order']?></td>
+											<td><?= $o['waktu_order'];?></td>
+											<td><?= $o['nama_meja']?></td>
+											<td><?= $o['total_harga']?></td>
+											<td><?= $o['pembayaran']?></td>
+											<td><?= $o['kembalian']?></td>
+											<?php if($o['status_bayar']=="Belum Terbayar"){?>
+												<td><span class="badge badge-danger"><?= $o['status_bayar'];?></span></td>
+											<?php } else{?>
+												<td><span class="badge badge-success"><?= $o['status_bayar'];?></span></td>
+											<?php };?>
 										</tr>
-										<tr align="center">
-											<td>Ord002</td>
-											<td>Ucup</td>
-											<td>15/12/2020</td>
-											<td>20</td>
-											<td>3</td>
-                                            <td>2</td>
-											<td><span class="badge badge-success">Terbayar</span></td>
-										</tr>
+									<?php endforeach;?>
 								</tbody>
 								
 							</table>

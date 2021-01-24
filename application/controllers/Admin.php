@@ -12,6 +12,10 @@ class Admin extends CI_Controller {
         $login = $this->session->userdata('id_pegawai');
         if($login){
             $data['user'] = $login; 
+            $data['order'] = $this->Model_admin->vieworders();
+            $data['foods'] = $this->Model_admin->viewfood();
+            $data['bev'] = $this->Model_admin->viewbev();
+            $data['orders'] = $this->Model_admin->vieworder();
             $this->load->view('admin', $data);
         } else{
             redirect('login');
@@ -47,11 +51,7 @@ class Admin extends CI_Controller {
     }
 
     public function addmenu(){
-        $this->form_validation->set_rules('namamenu', 'required');
-        $this->form_validation->set_rules('hargamenu', 'required');
-        $this->form_validation->set_rules('jenismenu', 'required');
-        if($this->form_validation->run() == false){
-            $this->Model_admin->tambahmenu();
-        }
+        $this->Model_admin->tambahmenu();
+        
     }
 }

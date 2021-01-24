@@ -44,6 +44,11 @@ class Model_order extends CI_model
     public function insertdet(){
         //MENU HARGA
         $id = $this->input->post('idmenu', true);
+        if($id<=36){
+            $jm =1;
+        } else{
+            $jm=2;
+        }
         $this->db->select('harga_menu');
         $this->db->where('id_menu',$id);
         $select = $this->db->get('menu') -> result_array();
@@ -62,6 +67,7 @@ class Model_order extends CI_model
             "harga_order" => $total,
             "status_order" => $status,
             "statusnya" => "Belum Terbayar",
+            "jm" => $jm,
         );
         $this->db->insert('detail_order', $data);
         redirect('order');
