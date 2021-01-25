@@ -8,8 +8,7 @@ class Kasir extends CI_Controller {
         $this->load->model('Model_kasir');
     }
 
-	public function index()
-	{
+	public function index(){
 		$login = $this->session->userdata('id_pegawai');
         if($login){
             $data['user'] = $login;
@@ -23,8 +22,7 @@ class Kasir extends CI_Controller {
         }
 	}
 
-	public function bill()
-	{
+	public function bill(){
 		$login = $this->session->userdata('id_pegawai');
         if($login){
             $data['user'] = $login; 
