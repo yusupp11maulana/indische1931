@@ -52,7 +52,7 @@ class Model_kasir extends CI_model
             "id_pegawai" => $pgw,
             "pembayaran" => $uang,
             "kembalian" => $kembalian,
-            "Status_bayar" => "Terbayar",
+            "status_bayar" => "Terbayar",
         );
         $this->db->where('id_order', $id);
         $this->db->update('orderan', $data);
@@ -62,6 +62,11 @@ class Model_kasir extends CI_model
         );
         $this->db->where('id_meja', $meja);
         $this->db->update('meja', $mejadata);
+        $data=array(
+            "statusnya" => "Terbayar",
+        );
+        $this->db->where('id_order', $id);
+        $this->db->update('detail', $data);
         redirect('kasir');
     }
 }
