@@ -118,7 +118,7 @@
 				<div class="col-lg-12">
 					<div class="card bg-light" style="border-radius: 7px">
 						<div class="container" style="padding-top: 2%; margin-bottom: 1%">
-							<h5>DATA KARYAWAN</h5>
+							<h5>DATA DAFTAR MENU</h5>
 						</div>
 						<div class="table-responsive">
 							<table class="table align-items-center table-light bg-light">
