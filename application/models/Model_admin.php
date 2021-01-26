@@ -40,6 +40,7 @@ class Model_admin extends CI_model
     }
 
     public function vieworders(){
+        date_default_timezone_set("Asia/Jakarta");
         $tanggal = date('Y-m-d');
         $this->db->where('tgl_order', $tanggal);
         return $this->db->count_all('orderan');
@@ -47,6 +48,7 @@ class Model_admin extends CI_model
     }
 
     public function viewfood(){
+        date_default_timezone_set("Asia/Jakarta");
         $food="Foods";
         $this->db->join('orderan', 'orderan.id_order=detail.id_order');
         $tanggal= date('Y-m-d');
@@ -63,6 +65,7 @@ class Model_admin extends CI_model
     }
 
     public function viewbev(){
+        date_default_timezone_set("Asia/Jakarta");
         $bev="Beverages";
         $tanggal= date('Y-m-d');
         $this->db->join('orderan', 'orderan.id_order=detail.id_order');

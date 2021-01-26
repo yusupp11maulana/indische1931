@@ -9,6 +9,7 @@ class Model_kasir extends CI_model
     }
 
     public function vieworderbill(){
+        date_default_timezone_set("Asia/Jakarta");
         $status = "Belum Terbayar";
         $tanggal = date('Y-m-d');
         $this->db->where('tgl_order',$tanggal);

@@ -146,7 +146,7 @@
 													<span class="btn-inner--text">Actived</span>
 												</button></a><a href="delmenu/<?=$m['id_menu']; ?>"><button class="btn btn-sm btn-danger">
 													<span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span>
-													<span class="btn-inner--text">Deavtived</span>
+													<span class="btn-inner--text">Deactivated</span>
 												</button></a>
 											</td>
 										</tr>

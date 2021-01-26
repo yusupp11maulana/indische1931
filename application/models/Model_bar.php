@@ -3,6 +3,7 @@
 class Model_bar extends CI_model
 {
     public function vieworder(){
+        date_default_timezone_set("Asia/Jakarta");
         $bev="Beverages";
         $tanggal = date('Y-m-d');
         $this->db->where('tgl_order', $tanggal);
