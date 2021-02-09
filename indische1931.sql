@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jan 2021 pada 09.28
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.2.34
+-- Waktu pembuatan: 28 Jan 2021 pada 00.03
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,6 +38,13 @@ CREATE TABLE `customer` (
   `no_telp_customer` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `customer`
+--
+
+INSERT INTO `customer` (`no_ktp`, `nama_customer`, `email`, `password`, `alamat_customer`, `jenis_kelamin`, `tanggal_lahir`, `no_telp_customer`) VALUES
+('357817161199001', 'Yusup Maulana', 'yusupp11maulana@gmail.com', 'yusup1611', 'Kedinding Tengah 8C/6', 'Laki-laki', '1999-11-16', '085549002851');
+
 -- --------------------------------------------------------
 
 --
@@ -55,6 +62,14 @@ CREATE TABLE `detail` (
   `statusnya` varchar(20) NOT NULL,
   `jm` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `detail`
+--
+
+INSERT INTO `detail` (`id_detail`, `id_order`, `no_ktp`, `id_menu`, `jumlah_order`, `harga_order`, `status_order`, `statusnya`, `jm`) VALUES
+('Det00001', 'Ord00001', '357817161199001', 3, 1, 18000, 'Ready', 'Terbayar', 1),
+('Det00002', 'Ord00001', '357817161199001', 39, 1, 20000, 'Ready', 'Terbayar', 2);
 
 -- --------------------------------------------------------
 
@@ -118,7 +133,7 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga_menu`, `jenis_menu`, `ket_menu`) VALUES
-(1, 'Americano Hot', 17000, 'Beverages', 'actived'),
+(1, 'Americano Hot', 17000, 'Beverages', 'deactived'),
 (2, 'Americano Ice', 18000, 'Beverages', 'actived'),
 (3, 'Cappucinno Hot', 18000, 'Beverages', 'actived'),
 (4, 'Cappucinno Ice', 20000, 'Beverages', 'actived'),
@@ -186,6 +201,13 @@ CREATE TABLE `orderan` (
   `status_bayar` varchar(20) NOT NULL,
   `promo` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `orderan`
+--
+
+INSERT INTO `orderan` (`id_order`, `no_ktp`, `id_pegawai`, `id_meja`, `jumlah_orderan`, `total_harga`, `pembayaran`, `kembalian`, `tgl_order`, `waktu_order`, `status_bayar`, `promo`) VALUES
+('Ord00001', '357817161199001', 'PGW0001', 1, 2, 30400, 50000, 19600, '2021-01-26', '00:18:54', 'Terbayar', 'Black Card');
 
 -- --------------------------------------------------------
 
