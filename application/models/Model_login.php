@@ -44,6 +44,29 @@ class Model_login extends CI_model
     }
 
     public function LoginCust(){
+        // PHP NATIVE
+        // $host = "localhost";
+        // $user = "root";
+        // $pass = "";
+        // $db = "indische1931";
+
+        // $conn = mysqli_connect($host, $user, $pass);
+        // mysqli_select_db($conn, $db);
+        // $username = $_POST['email'];
+        // $pass = $_POST['password'];
+
+        // $login = mysqli_query($conn, "SELECT * FROM CUSTOMER WHERE email = '{$username}' AND password='{$pass}'");
+        // if(mysqli_num_rows($login)==0){
+        //     die('salah');
+        // } else {
+        //     $data=[
+        //             'ktp' => $username,
+        //         ];
+        //         $this->session->set_userdata($data);
+        //         redirect('landing');
+        // }
+        
+        CODEIGNITER
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user = $this->db->get_where('customer', ['email'=> $email])->row_array();
