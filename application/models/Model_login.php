@@ -66,7 +66,7 @@ class Model_login extends CI_model
         //         redirect('landing');
         // }
         
-        CODEIGNITER
+        // CODEIGNITER
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user = $this->db->get_where('customer', ['email'=> $email])->row_array();
